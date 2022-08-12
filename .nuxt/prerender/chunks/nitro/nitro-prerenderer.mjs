@@ -1,16 +1,11 @@
-globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/node-fetch-native@0.1.4/node_modules/node-fetch-native/dist/polyfill.mjs';
-import { Server } from 'http';
-import { tmpdir } from 'os';
-import { join } from 'path';
-import { mkdirSync } from 'fs';
-import { parentPort, threadId } from 'worker_threads';
-import { provider, isWindows } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/std-env@3.1.1/node_modules/std-env/dist/index.mjs';
-import { defineEventHandler, handleCacheHeaders, createEvent, useQuery, useCookie, createError, defineLazyEventHandler, useBody, createApp, createRouter, lazyEventHandler, eventHandler } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/h3@0.7.14/node_modules/h3/dist/index.mjs';
+import 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/node-fetch-native@0.1.4/node_modules/node-fetch-native/dist/polyfill.mjs';
+import { defineEventHandler, handleCacheHeaders, createEvent, useQuery, useCookie, createError, defineLazyEventHandler, useBody, createApp, createRouter, lazyEventHandler } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/h3@0.7.14/node_modules/h3/dist/index.mjs';
 import { createFetch as createFetch$1, Headers } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/ohmyfetch@0.4.18/node_modules/ohmyfetch/dist/node.mjs';
 import destr from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/destr@1.1.1/node_modules/destr/dist/index.mjs';
 import { createRouter as createRouter$1 } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/radix3@0.1.2/node_modules/radix3/dist/index.mjs';
 import { createCall, createFetch } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/unenv@0.5.3/node_modules/unenv/runtime/fetch/index.mjs';
 import { createHooks } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/hookable@5.1.1/node_modules/hookable/dist/index.mjs';
+import { snakeCase, kebabCase, pascalCase } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/scule@0.2.1/node_modules/scule/dist/index.mjs';
 import { hash } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/ohash@0.1.5/node_modules/ohash/dist/index.mjs';
 import { parseURL, withQuery, withLeadingSlash, withoutTrailingSlash, withBase, joinURL } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/ufo@0.8.5/node_modules/ufo/dist/index.mjs';
 import { createStorage, prefixStorage } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/unstorage@0.4.2/node_modules/unstorage/dist/index.mjs';
@@ -30,14 +25,13 @@ import flat from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/flat@5.0
 import { unified } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/unified@10.1.2/node_modules/unified/index.js';
 import remarkParse from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/remark-parse@10.0.1/node_modules/remark-parse/index.js';
 import remark2rehype from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/remark-rehype@10.1.0/node_modules/remark-rehype/index.js';
-import { snakeCase, kebabCase, pascalCase } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/scule@0.2.1/node_modules/scule/dist/index.mjs';
 import { visit } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/unist-util-visit@4.1.0/node_modules/unist-util-visit/index.js';
 import { stringifyEntitiesLight } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/stringify-entities@4.0.3/node_modules/stringify-entities/index.js';
 import { parseEntities } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/parse-entities@4.0.0/node_modules/parse-entities/index.js';
-import { markdownLineEnding, markdownSpace, asciiAlpha, markdownLineEndingOrSpace, asciiAlphanumeric } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/micromark-util-character@1.1.0/node_modules/micromark-util-character/dev/index.js';
-import { factorySpace } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/micromark-factory-space@1.0.0/node_modules/micromark-factory-space/dev/index.js';
-import { factoryWhitespace } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/micromark-factory-whitespace@1.0.0/node_modules/micromark-factory-whitespace/dev/index.js';
-import { codeFenced } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/micromark-core-commonmark@1.0.6/node_modules/micromark-core-commonmark/dev/index.js';
+import { markdownLineEnding, markdownSpace, asciiAlpha, markdownLineEndingOrSpace, asciiAlphanumeric } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/micromark-util-character@1.1.0/node_modules/micromark-util-character/index.js';
+import { factorySpace } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/micromark-factory-space@1.0.0/node_modules/micromark-factory-space/index.js';
+import { factoryWhitespace } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/micromark-factory-whitespace@1.0.0/node_modules/micromark-factory-whitespace/index.js';
+import { codeFenced } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/micromark-core-commonmark@1.0.6/node_modules/micromark-core-commonmark/index.js';
 import { all } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/mdast-util-to-hast@12.2.0/node_modules/mdast-util-to-hast/index.js';
 import { detab } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/detab@3.0.1/node_modules/detab/index.js';
 import { u } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/unist-builder@3.0.0/node_modules/unist-builder/index.js';
@@ -46,12 +40,8 @@ import { position } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/
 import htmlTags from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/html-tags@3.2.0/node_modules/html-tags/index.js';
 import slugify from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/slugify@1.6.5/node_modules/slugify/slugify.js';
 import { getHighlighter, BUNDLED_LANGUAGES, BUNDLED_THEMES } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/shiki-es@0.1.2/node_modules/shiki-es/dist/shiki.node.mjs';
-import { createRenderer } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/vue-bundle-renderer@0.3.9/node_modules/vue-bundle-renderer/dist/index.mjs';
-import devalue from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+devalue@2.0.0/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { renderToString } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/vue@3.2.37/node_modules/vue/server-renderer/index.mjs';
-import htmlTemplate from '/Users/nicole/dev/vvifi-fyi/.nuxt/views/document.template.mjs';
 
-const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"routes":{},"envPrefix":"NUXT_"},"public":{"content":{"base":"_content","tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"highlight":{"theme":"github-dark"},"wsUrl":"ws://localhost:4000/"}},"content":{"cacheVersion":2,"cacheIntegerity":"9fmRlBJHNV","transformers":["/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/markdown.mjs","/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/yaml.mjs","/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/json.mjs","/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/csv.mjs","/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/path-meta.mjs","/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/shiki.mjs"],"base":"_content","watch":true,"sources":["content"],"ignores":["\\.","-"],"locales":[],"highlight":{"theme":"github-dark"},"markdown":{"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"toc":{"depth":5,"searchDepth":5},"rehypePlugins":[],"remarkPlugins":[]},"yaml":{},"csv":{},"navigation":{"fields":[]}}};
+const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"routes":{},"envPrefix":"NUXT_"},"public":{"content":{"base":"_content","tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"highlight":{"theme":"github-dark"},"wsUrl":""}},"content":{"cacheVersion":2,"cacheIntegerity":"9fmRlBJHNV","transformers":["/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/markdown.mjs","/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/yaml.mjs","/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/json.mjs","/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/csv.mjs","/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/path-meta.mjs","/Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/server/transformers/shiki.mjs"],"base":"_content","watch":true,"sources":["content"],"ignores":["\\.","-"],"locales":[],"highlight":{"theme":"github-dark"},"markdown":{"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"toc":{"depth":5,"searchDepth":5},"rehypePlugins":[],"remarkPlugins":[]},"yaml":{},"csv":{},"navigation":{"fields":[]}}};
 const ENV_PREFIX = "NITRO_";
 const ENV_PREFIX_ALT = _runtimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
 const getEnv = (key) => {
@@ -328,7 +318,7 @@ const errorHandler = (async function errorhandler(_error, event) {
     statusCode,
     statusMessage,
     message,
-    description: statusCode !== 404 ? `<pre>${stack.map((i) => `<span class="stack${i.internal ? " internal" : ""}">${i.text}</span>`).join("\n")}</pre>` : "",
+    description: "",
     data: _error.data
   };
   event.res.statusCode = errorObject.statusCode;
@@ -3578,10 +3568,9 @@ const _xY18Ip = defineLazyEventHandler(async () => {
   };
 });
 
-const _lazy_cQaRKT = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_cQaRKT = () => import('../renderer.mjs').then(function (n) { return n.r; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_cQaRKT, lazy: true, middleware: false, method: undefined },
   { route: '/api/_content/query/:qid', handler: _Qe6D2k, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/query', handler: _Qe6D2k, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/cache', handler: _OkAEYt, lazy: false, middleware: false, method: "get" },
@@ -3595,7 +3584,7 @@ function createNitroApp() {
   const config = useRuntimeConfig();
   const hooks = createHooks();
   const h3App = createApp({
-    debug: destr(true),
+    debug: destr(false),
     onError: errorHandler
   });
   h3App.use(config.app.baseURL, timingMiddleware);
@@ -3637,159 +3626,11 @@ function createNitroApp() {
 const nitroApp = createNitroApp();
 const useNitroApp = () => nitroApp;
 
-const server = new Server(nitroApp.h3App.nodeHandler);
-function getAddress() {
-  if (provider === "stackblitz" || process.env.NITRO_NO_UNIX_SOCKET) {
-    return "0";
-  }
-  const socketName = `worker-${process.pid}-${threadId}.sock`;
-  if (isWindows) {
-    return join("\\\\.\\pipe\\nitro", socketName);
-  } else {
-    const socketDir = join(tmpdir(), "nitro");
-    mkdirSync(socketDir, { recursive: true });
-    return join(socketDir, socketName);
-  }
-}
-const listenAddress = getAddress();
-server.listen(listenAddress, () => {
-  const _address = server.address();
-  parentPort.postMessage({
-    event: "listen",
-    address: typeof _address === "string" ? { socketPath: _address } : { host: "localhost", port: _address.port }
-  });
-});
+const localFetch = nitroApp.localFetch;
 {
-  process.on("unhandledRejection", (err) => console.error("[nitro] [dev] [unhandledRejection]", err));
-  process.on("uncaughtException", (err) => console.error("[nitro] [dev] [uncaughtException]", err));
+  process.on("unhandledRejection", (err) => console.error("[nitro] [dev] [unhandledRejection] " + err));
+  process.on("uncaughtException", (err) => console.error("[nitro] [dev] [uncaughtException] " + err));
 }
 
-function buildAssetsURL(...path) {
-  return joinURL(publicAssetsURL(), useRuntimeConfig().app.buildAssetsDir, ...path);
-}
-function publicAssetsURL(...path) {
-  const publicBase = useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
-  return path.length ? joinURL(publicBase, ...path) : publicBase;
-}
-
-const getClientManifest = () => import('/Users/nicole/dev/vvifi-fyi/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getServerEntry = () => import('/Users/nicole/dev/vvifi-fyi/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
-const getSSRRenderer = lazyCachedFunction(async () => {
-  const clientManifest = await getClientManifest();
-  if (!clientManifest) {
-    throw new Error("client.manifest is not available");
-  }
-  const createSSRApp = await getServerEntry();
-  if (!createSSRApp) {
-    throw new Error("Server bundle is not available");
-  }
-  const renderer = createRenderer(createSSRApp, {
-    clientManifest,
-    renderToString: renderToString$1,
-    publicPath: buildAssetsURL()
-  });
-  async function renderToString$1(input, context) {
-    const html = await renderToString(input, context);
-    if (process.env.NUXT_VITE_NODE_OPTIONS) {
-      renderer.rendererContext.updateManifest(await getClientManifest());
-    }
-    return `<div id="__nuxt">${html}</div>`;
-  }
-  return renderer;
-});
-const getSPARenderer = lazyCachedFunction(async () => {
-  const clientManifest = await getClientManifest();
-  const renderToString = (ssrContext) => {
-    const config = useRuntimeConfig();
-    ssrContext.payload = {
-      serverRendered: false,
-      config: {
-        public: config.public,
-        app: config.app
-      }
-    };
-    let entryFiles = Object.values(clientManifest).filter((fileValue) => fileValue.isEntry);
-    if ("all" in clientManifest && "initial" in clientManifest) {
-      entryFiles = clientManifest.initial.map((file) => ({ file }));
-    }
-    return Promise.resolve({
-      html: '<div id="__nuxt"></div>',
-      renderResourceHints: () => "",
-      renderStyles: () => entryFiles.flatMap(({ css }) => css).filter((css) => css != null).map((file) => `<link rel="stylesheet" href="${buildAssetsURL(file)}">`).join(""),
-      renderScripts: () => entryFiles.map(({ file }) => {
-        const isMJS = !file.endsWith(".js");
-        return `<script ${isMJS ? 'type="module"' : ""} src="${buildAssetsURL(file)}"><\/script>`;
-      }).join("")
-    });
-  };
-  return { renderToString };
-});
-const renderer = eventHandler(async (event) => {
-  const ssrError = event.req.url?.startsWith("/__nuxt_error") ? useQuery(event) : null;
-  const url = ssrError?.url || event.req.url;
-  const ssrContext = {
-    url,
-    event,
-    req: event.req,
-    res: event.res,
-    runtimeConfig: useRuntimeConfig(),
-    noSSR: !!event.req.headers["x-nuxt-no-ssr"],
-    error: ssrError,
-    nuxt: void 0,
-    payload: void 0
-  };
-  const renderer = ssrContext.noSSR ? await getSPARenderer() : await getSSRRenderer();
-  const rendered = await renderer.renderToString(ssrContext).catch((e) => {
-    if (!ssrError) {
-      throw e;
-    }
-  });
-  if (!rendered) {
-    return;
-  }
-  if (event.res.writableEnded) {
-    return;
-  }
-  if (ssrContext.error && !ssrError) {
-    throw ssrContext.error;
-  }
-  if (ssrContext.nuxt?.hooks) {
-    await ssrContext.nuxt.hooks.callHook("app:rendered");
-  }
-  const html = await renderHTML(ssrContext.payload, rendered, ssrContext);
-  event.res.setHeader("Content-Type", "text/html;charset=UTF-8");
-  return html;
-});
-async function renderHTML(payload, rendered, ssrContext) {
-  const state = `<script>window.__NUXT__=${devalue(payload)}<\/script>`;
-  rendered.meta = rendered.meta || {};
-  if (ssrContext.renderMeta) {
-    Object.assign(rendered.meta, await ssrContext.renderMeta());
-  }
-  return htmlTemplate({
-    HTML_ATTRS: rendered.meta.htmlAttrs || "",
-    HEAD_ATTRS: rendered.meta.headAttrs || "",
-    HEAD: (rendered.meta.headTags || "") + rendered.renderResourceHints() + rendered.renderStyles() + (ssrContext.styles || ""),
-    BODY_ATTRS: rendered.meta.bodyAttrs || "",
-    BODY_PREPEND: ssrContext.teleports?.body || "",
-    APP: (rendered.meta.bodyScriptsPrepend || "") + rendered.html + state + rendered.renderScripts() + (rendered.meta.bodyScripts || "")
-  });
-}
-function lazyCachedFunction(fn) {
-  let res = null;
-  return () => {
-    if (res === null) {
-      res = fn().catch((err) => {
-        res = null;
-        throw err;
-      });
-    }
-    return res;
-  };
-}
-
-const renderer$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  'default': renderer
-});
-//# sourceMappingURL=index.mjs.map
+export { localFetch as l, useRuntimeConfig as u };
+//# sourceMappingURL=nitro-prerenderer.mjs.map
