@@ -43,7 +43,7 @@ const articleTags = [...new Set(flatten(data.value, "tags"))];
     <ul class="post-tags" :class="{ expanded: expanded }">
       <!-- list out tags with links -->
       <li v-for="(tag, n) in articleTags" :key="n" class="tag">
-        <NuxtLink :to="`/blog/tags/${tag}`" class="font-semibold">{{ `#${tag}` }}</NuxtLink>
+        <NuxtLink :to="`/blog/tags/${tag}`" class="font-semibold">{{ tag }}</NuxtLink>
       </li>
     </ul>
   </div>
@@ -67,7 +67,7 @@ const articleTags = [...new Set(flatten(data.value, "tags"))];
   @apply border-slate-200;
 }
 .post-tags {
-  @apply flex items-center gap-2 transition-all max-w-0 overflow-hidden;
+  @apply flex items-center gap-2 h-10 max-w-0 overflow-hidden;
 }
 .post-tags li {
   @apply rounded-lg bg-slate-50 py-1.5 px-2 transition-all text-xs; 
