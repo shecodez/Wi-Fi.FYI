@@ -109,7 +109,9 @@ declare module '@nuxt/schema' {
     },
   }
   interface PublicRuntimeConfig {
-     content: {
+     reCaptchaSiteKey: string,
+
+    content: {
         base: string,
 
         tags: {

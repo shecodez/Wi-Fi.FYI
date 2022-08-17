@@ -2,6 +2,8 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'InfoBox': typeof import("../components/content/InfoBox.vue")['default'],
+    'Comment': typeof import("../components/Comment.vue")['default'],
+    'Comments': typeof import("../components/Comments.vue")['default'],
     'Footer': typeof import("../components/Footer.vue")['default'],
     'Header': typeof import("../components/Header.vue")['default'],
     'PrevNext': typeof import("../components/PrevNext.vue")['default'],
@@ -47,6 +49,8 @@ declare module 'vue' {
     'NuxtLink': typeof import("../node_modules/.pnpm/nuxt@3.0.0-rc.6/node_modules/nuxt/dist/app/components/nuxt-link")['default'],
     'NuxtLoadingIndicator': typeof import("../node_modules/.pnpm/nuxt@3.0.0-rc.6/node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
     'LazyInfoBox': typeof import("../components/content/InfoBox.vue")['default'],
+    'LazyComment': typeof import("../components/Comment.vue")['default'],
+    'LazyComments': typeof import("../components/Comments.vue")['default'],
     'LazyFooter': typeof import("../components/Footer.vue")['default'],
     'LazyHeader': typeof import("../components/Header.vue")['default'],
     'LazyPrevNext': typeof import("../components/PrevNext.vue")['default'],
@@ -94,6 +98,8 @@ declare module 'vue' {
   }
 }
 export const InfoBox: typeof import("../components/content/InfoBox.vue")['default']
+export const Comment: typeof import("../components/Comment.vue")['default']
+export const Comments: typeof import("../components/Comments.vue")['default']
 export const Footer: typeof import("../components/Footer.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
 export const PrevNext: typeof import("../components/PrevNext.vue")['default']
@@ -139,6 +145,8 @@ export const ServerPlaceholder: typeof import("../node_modules/.pnpm/nuxt@3.0.0-
 export const NuxtLink: typeof import("../node_modules/.pnpm/nuxt@3.0.0-rc.6/node_modules/nuxt/dist/app/components/nuxt-link")['default']
 export const NuxtLoadingIndicator: typeof import("../node_modules/.pnpm/nuxt@3.0.0-rc.6/node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
 export const LazyInfoBox: typeof import("../components/content/InfoBox.vue")['default']
+export const LazyComment: typeof import("../components/Comment.vue")['default']
+export const LazyComments: typeof import("../components/Comments.vue")['default']
 export const LazyFooter: typeof import("../components/Footer.vue")['default']
 export const LazyHeader: typeof import("../components/Header.vue")['default']
 export const LazyPrevNext: typeof import("../components/PrevNext.vue")['default']

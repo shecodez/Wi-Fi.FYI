@@ -62,6 +62,11 @@ useHead({
       </article> 
     </section>
 
+    <hr class="my-4" />
+    <section class="comment-section">
+      <Comments :slug="data.post._path"/>
+    </section>
+
     <PrevNext :prev="prev" :next="next" />
   </main>
 </template>
@@ -76,7 +81,7 @@ useHead({
 }
 
 .post-header .heading {
-  @apply font-extrabold text-5xl;
+  @apply font-extrabold text-5xl pb-4;
 }
 
 .post-header .supporting {

@@ -17,5 +17,13 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     cssPath: '~/assets/css/main.css'
-  }
+  },
+  runtimeConfig: {
+    // Private config that is only available on the server
+    // apiSecret: '123',
+    // Config within public will be also exposed to the client
+    public: {
+      reCaptchaSiteKey: '6LcejH8hAAAAAPXc4uhc6r1oQlrwBetAUmqfXral'
+    }
+  },
 })

@@ -13,5 +13,9 @@
     "@tailwindcss/typography": "^0.5.4",
     "nuxt": "^3.0.0-rc.4",
     "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.1",
+    "vue-recaptcha": "^2.0.2"
   }
 }
