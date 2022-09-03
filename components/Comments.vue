@@ -9,6 +9,7 @@ const state = reactive({
   loading: false,
   error: null,
   comments: [],
+  recaptchaSuccess: false,
 });
 
 const comment = reactive({
@@ -17,7 +18,27 @@ const comment = reactive({
   message: '',
 });
 
+function handleRecaptchaSuccess(response) {
+  console.log('handleRecaptchaSuccess', response);
+  state.error = '';
+  state.recaptchaSuccess = true;
+}
+
+function handleRecaptchaError() {
+  state.error = 'Recaptcha Error';
+  state.recaptchaSuccess = false;
+}
+
+function checkIfRecaptchaVerified() {
+  if (!state.recaptchaSuccess) {
+    state.error = 'Please tick recaptcha.';
+    return false;
+  }
+  return true;
+}
+
 async function submitComment() {
+  if (!checkIfRecaptchaVerified()) return;
   state.loading = true;
 
   const GITHUB_USERNAME = 'shecodez';
@@ -66,7 +87,9 @@ async function submitComment() {
           />
           <span class="hint">
             Learn now to write Markdown with this
-            <a rel="nofollow" href="https://www.markdownguide.org/cheat-sheet" target="_blank" tabindex="-1">Cheat Sheet</a>.
+            <a rel="nofollow" href="https://www.markdownguide.org/cheat-sheet" target="_blank" tabindex="-1"
+              >Cheat Sheet</a
+            >.
           </span>
         </div>
 
@@ -77,7 +100,7 @@ async function submitComment() {
 
         <div class="form-control">
           <label for="email">E-Mail</label>
-          <input v-model="comment.email" name="email" type="email" placeholder="E-Mail Address (optional)" required />
+          <input v-model="comment.email" name="email" type="email" placeholder="E-Mail Address (optional)" />
           <span class="hint">
             Email is used to display
             <a rel="nofollow" href="https://gravatar.com/" target="_blank" tabindex="-1">Gravatar</a>.
@@ -85,9 +108,13 @@ async function submitComment() {
         </div>
 
         <div class="form-control">
-          <vue-recaptcha :sitekey="config.public.reCaptchaSiteKey"></vue-recaptcha> 
+          <vue-recaptcha
+            @verify="handleRecaptchaSuccess"
+            @error="handleRecaptchaError"
+            :sitekey="config.public.reCaptchaSiteKey"
+          ></vue-recaptcha>
         </div>
-        
+
         <button type="submit" class="comment-btn">
           {{ state.loading ? 'Loading...' : 'Submit' }}
         </button>

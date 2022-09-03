@@ -1,7 +1,7 @@
 ---
 published: true
 date: 2022-08-08T21:12:31.593Z
-title: "Ultimate GOAT (Get Out And Travel) carry-on packing guide"
+title: "The GOAT (Get Out And Travel) best carry-on packing guide"
 description: I know it's tempting to try to pack everything sans the kitchen sink
   --but we are channeling GOAT not pack mule!
 cover_image: 'images/uploads/carry-on-packing-guide-cover.jpg'
@@ -20,7 +20,7 @@ Okay who here gets a little stressed when it's time to pack for a trip, and isn'
 </div> 
 
 
-That was me a few years ago, so I know it's tempting to try to pack everything but the kitchen sink --but we are channeling GOAT not pack mule! 🏆🐐
+That was me a few years ago, so I know it's tempting to try to pack everything but the kitchen sink --but we are channeling GOAT not pack mule!
 
 No matter if I choose to travel light and take only a carry on (plus the personal item) or break out the heavy duty check-in luggage, my carry on only contains:
 
