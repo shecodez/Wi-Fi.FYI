@@ -4239,46 +4239,46 @@ const preload = defineNuxtPlugin((nuxtApp) => {
   });
 });
 const components = {
-  InfoBox: vue_cjs_prod.defineAsyncComponent(() => import('./InfoBox.29abd25e.mjs').then((c) => c.default || c)),
-  ContentDoc: vue_cjs_prod.defineAsyncComponent(() => import('./ContentDoc.63fd5b8e.mjs').then((c) => c.default || c)),
+  InfoBox: vue_cjs_prod.defineAsyncComponent(() => import('./InfoBox.ed81a38b.mjs').then((c) => c.default || c)),
+  ContentDoc: vue_cjs_prod.defineAsyncComponent(() => import('./ContentDoc.37efdf4d.mjs').then((c) => c.default || c)),
   ContentList: vue_cjs_prod.defineAsyncComponent(() => Promise.resolve().then(function() {
     return ContentList;
   }).then((c) => c.default || c)),
-  ContentNavigation: vue_cjs_prod.defineAsyncComponent(() => import('./ContentNavigation.bd101120.mjs').then((c) => c.default || c)),
+  ContentNavigation: vue_cjs_prod.defineAsyncComponent(() => import('./ContentNavigation.d45dd96f.mjs').then((c) => c.default || c)),
   ContentQuery: vue_cjs_prod.defineAsyncComponent(() => Promise.resolve().then(function() {
     return ContentQuery$1;
   }).then((c) => c.default || c)),
   ContentRenderer: vue_cjs_prod.defineAsyncComponent(() => Promise.resolve().then(function() {
     return ContentRenderer;
   }).then((c) => c.default || c)),
-  Markdown: vue_cjs_prod.defineAsyncComponent(() => import('./Markdown.fe4ed455.mjs').then((c) => c.default || c)),
+  Markdown: vue_cjs_prod.defineAsyncComponent(() => import('./Markdown.66e5d89e.mjs').then((c) => c.default || c)),
   MarkdownRenderer: vue_cjs_prod.defineAsyncComponent(() => Promise.resolve().then(function() {
     return MarkdownRenderer;
   }).then((c) => c.default || c)),
-  ProseA: vue_cjs_prod.defineAsyncComponent(() => import('./ProseA.f043d233.mjs').then((c) => c.default || c)),
-  ProseBlockquote: vue_cjs_prod.defineAsyncComponent(() => import('./ProseBlockquote.7b1efcc8.mjs').then((c) => c.default || c)),
-  ProseCode: vue_cjs_prod.defineAsyncComponent(() => import('./ProseCode.32aba454.mjs').then((c) => c.default || c)),
-  ProseCodeInline: vue_cjs_prod.defineAsyncComponent(() => import('./ProseCodeInline.f0f50fdd.mjs').then((c) => c.default || c)),
-  ProseEm: vue_cjs_prod.defineAsyncComponent(() => import('./ProseEm.1c219319.mjs').then((c) => c.default || c)),
-  ProseH1: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH1.9d7fc68c.mjs').then((c) => c.default || c)),
-  ProseH2: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH2.dd54985a.mjs').then((c) => c.default || c)),
-  ProseH3: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH3.92665438.mjs').then((c) => c.default || c)),
-  ProseH4: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH4.d1b72801.mjs').then((c) => c.default || c)),
-  ProseH5: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH5.eddc097f.mjs').then((c) => c.default || c)),
-  ProseH6: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH6.b826c9e8.mjs').then((c) => c.default || c)),
-  ProseHr: vue_cjs_prod.defineAsyncComponent(() => import('./ProseHr.b17c33dc.mjs').then((c) => c.default || c)),
+  ProseA: vue_cjs_prod.defineAsyncComponent(() => import('./ProseA.ea2d0831.mjs').then((c) => c.default || c)),
+  ProseBlockquote: vue_cjs_prod.defineAsyncComponent(() => import('./ProseBlockquote.08cbe583.mjs').then((c) => c.default || c)),
+  ProseCode: vue_cjs_prod.defineAsyncComponent(() => import('./ProseCode.5d0320e0.mjs').then((c) => c.default || c)),
+  ProseCodeInline: vue_cjs_prod.defineAsyncComponent(() => import('./ProseCodeInline.1c06892e.mjs').then((c) => c.default || c)),
+  ProseEm: vue_cjs_prod.defineAsyncComponent(() => import('./ProseEm.5c19eb8e.mjs').then((c) => c.default || c)),
+  ProseH1: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH1.c37b2bfc.mjs').then((c) => c.default || c)),
+  ProseH2: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH2.396a6496.mjs').then((c) => c.default || c)),
+  ProseH3: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH3.5b208cf2.mjs').then((c) => c.default || c)),
+  ProseH4: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH4.f5696a29.mjs').then((c) => c.default || c)),
+  ProseH5: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH5.e1a97f6c.mjs').then((c) => c.default || c)),
+  ProseH6: vue_cjs_prod.defineAsyncComponent(() => import('./ProseH6.2f77ad09.mjs').then((c) => c.default || c)),
+  ProseHr: vue_cjs_prod.defineAsyncComponent(() => import('./ProseHr.65deeba2.mjs').then((c) => c.default || c)),
   ProseImg: vue_cjs_prod.defineAsyncComponent(() => import('./ProseImg.aa3d0c8e.mjs').then((c) => c.default || c)),
-  ProseLi: vue_cjs_prod.defineAsyncComponent(() => import('./ProseLi.82c53e21.mjs').then((c) => c.default || c)),
-  ProseOl: vue_cjs_prod.defineAsyncComponent(() => import('./ProseOl.7fc35b4d.mjs').then((c) => c.default || c)),
-  ProseP: vue_cjs_prod.defineAsyncComponent(() => import('./ProseP.7915ee4c.mjs').then((c) => c.default || c)),
-  ProseStrong: vue_cjs_prod.defineAsyncComponent(() => import('./ProseStrong.801b5943.mjs').then((c) => c.default || c)),
-  ProseTable: vue_cjs_prod.defineAsyncComponent(() => import('./ProseTable.dbffaf37.mjs').then((c) => c.default || c)),
-  ProseTbody: vue_cjs_prod.defineAsyncComponent(() => import('./ProseTbody.2a20a3f8.mjs').then((c) => c.default || c)),
-  ProseTd: vue_cjs_prod.defineAsyncComponent(() => import('./ProseTd.a16ed6cd.mjs').then((c) => c.default || c)),
-  ProseTh: vue_cjs_prod.defineAsyncComponent(() => import('./ProseTh.bc6a3728.mjs').then((c) => c.default || c)),
-  ProseThead: vue_cjs_prod.defineAsyncComponent(() => import('./ProseThead.0f02da8e.mjs').then((c) => c.default || c)),
-  ProseTr: vue_cjs_prod.defineAsyncComponent(() => import('./ProseTr.79972561.mjs').then((c) => c.default || c)),
-  ProseUl: vue_cjs_prod.defineAsyncComponent(() => import('./ProseUl.d34e8f36.mjs').then((c) => c.default || c))
+  ProseLi: vue_cjs_prod.defineAsyncComponent(() => import('./ProseLi.5a6fdc10.mjs').then((c) => c.default || c)),
+  ProseOl: vue_cjs_prod.defineAsyncComponent(() => import('./ProseOl.655c2293.mjs').then((c) => c.default || c)),
+  ProseP: vue_cjs_prod.defineAsyncComponent(() => import('./ProseP.0f93457d.mjs').then((c) => c.default || c)),
+  ProseStrong: vue_cjs_prod.defineAsyncComponent(() => import('./ProseStrong.0845cd41.mjs').then((c) => c.default || c)),
+  ProseTable: vue_cjs_prod.defineAsyncComponent(() => import('./ProseTable.e3e45413.mjs').then((c) => c.default || c)),
+  ProseTbody: vue_cjs_prod.defineAsyncComponent(() => import('./ProseTbody.299e64de.mjs').then((c) => c.default || c)),
+  ProseTd: vue_cjs_prod.defineAsyncComponent(() => import('./ProseTd.5a95c56a.mjs').then((c) => c.default || c)),
+  ProseTh: vue_cjs_prod.defineAsyncComponent(() => import('./ProseTh.68e871ac.mjs').then((c) => c.default || c)),
+  ProseThead: vue_cjs_prod.defineAsyncComponent(() => import('./ProseThead.af8bb02b.mjs').then((c) => c.default || c)),
+  ProseTr: vue_cjs_prod.defineAsyncComponent(() => import('./ProseTr.5689c052.mjs').then((c) => c.default || c)),
+  ProseUl: vue_cjs_prod.defineAsyncComponent(() => import('./ProseUl.511053dd.mjs').then((c) => c.default || c))
 };
 const _47Users_47nicole_47dev_47vvifi_45fyi_47_46nuxt_47components_46plugin_46mjs = defineNuxtPlugin((nuxtApp) => {
   for (const name in components) {
@@ -5016,7 +5016,7 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$6 = {
+const _sfc_main$7 = {
   __name: "Toc",
   __ssrInlineRender: true,
   props: ["links"],
@@ -5041,13 +5041,13 @@ const _sfc_main$6 = {
     };
   }
 };
-const _sfc_setup$6 = _sfc_main$6.setup;
-_sfc_main$6.setup = (props, ctx) => {
+const _sfc_setup$7 = _sfc_main$7.setup;
+_sfc_main$7.setup = (props, ctx) => {
   const ssrContext = vue_cjs_prod.useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Toc.vue");
-  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+  return _sfc_setup$7 ? _sfc_setup$7(props, ctx) : void 0;
 };
-const __nuxt_component_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-58dad79e"]]);
+const __nuxt_component_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-58dad79e"]]);
 function isUppercase(char = "") {
   return char.toUpperCase() === char;
 }
@@ -6410,6 +6410,51 @@ const ContentRenderer = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
   __proto__: null,
   "default": __nuxt_component_1$2
 }, Symbol.toStringTag, { value: "Module" }));
+const _sfc_main$6 = {
+  __name: "Comments",
+  __ssrInlineRender: true,
+  props: ["slug"],
+  setup(__props) {
+    useRuntimeConfig();
+    const state = vue_cjs_prod.reactive({
+      loading: false,
+      error: null,
+      comments: [],
+      recaptchaSuccess: false
+    });
+    const comment = vue_cjs_prod.reactive({
+      name: "",
+      email: "",
+      message: ""
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${serverRenderer.exports.ssrRenderAttrs(vue_cjs_prod.mergeProps({ class: "flex flex-col md:flex-row gap-2 my-6" }, _attrs))} data-v-6a250446><div class="w-full md:m-4" data-v-6a250446><h3 data-v-6a250446>Leave a comment</h3>`);
+      if (state.error) {
+        _push(`<div class="alert alert-error rounded my-2" data-v-6a250446><div class="flex-1 flex gap-2 justify-start" data-v-6a250446><label data-v-6a250446>${serverRenderer.exports.ssrInterpolate(state.error)}</label></div></div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`<form class="comment-form" data-v-6a250446><div class="form-control required" data-v-6a250446><label for="message" data-v-6a250446>Message</label><textarea name="message" rows="4" placeholder="Your comment (Markdown accepted)" required data-v-6a250446>${serverRenderer.exports.ssrInterpolate(comment.message)}</textarea><span class="hint" data-v-6a250446> Learn now to write Markdown with this <a rel="nofollow" href="https://www.markdownguide.org/cheat-sheet" target="_blank" tabindex="-1" data-v-6a250446>Cheat Sheet</a>. </span></div><div class="form-control required" data-v-6a250446><label for="name" data-v-6a250446>Name</label><input${serverRenderer.exports.ssrRenderAttr("value", comment.name)} name="name" type="text" placeholder="Name" required data-v-6a250446></div><div class="form-control" data-v-6a250446><label for="email" data-v-6a250446>E-Mail</label><input${serverRenderer.exports.ssrRenderAttr("value", comment.email)} name="email" type="email" placeholder="E-Mail Address (optional)" data-v-6a250446><span class="hint" data-v-6a250446> Email is used to display <a rel="nofollow" href="https://gravatar.com/" target="_blank" tabindex="-1" data-v-6a250446>Gravatar</a>. </span></div><div class="form-control" data-v-6a250446></div><button type="submit" class="comment-btn" data-v-6a250446>${serverRenderer.exports.ssrInterpolate(state.loading ? "Loading..." : "Submit")}</button></form></div><div class="w-full md:m-4" data-v-6a250446><h3 data-v-6a250446>View Comments</h3>`);
+      if (state.comments.length) {
+        _push(`<ul data-v-6a250446><!--[-->`);
+        serverRenderer.exports.ssrRenderList(state.comments, (comment2) => {
+          _push(`<li data-v-6a250446>${serverRenderer.exports.ssrInterpolate(comment2)}</li>`);
+        });
+        _push(`<!--]--></ul>`);
+      } else {
+        _push(`<div data-v-6a250446><p data-v-6a250446>No comments yet.</p></div>`);
+      }
+      _push(`</div></div>`);
+    };
+  }
+};
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
+  const ssrContext = vue_cjs_prod.useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Comments.vue");
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+};
+const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-6a250446"]]);
 const _sfc_main$5 = {
   __name: "PrevNext",
   __ssrInlineRender: true,
@@ -6469,7 +6514,7 @@ _sfc_main$5.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/PrevNext.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const __nuxt_component_3 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-77a8ddde"]]);
+const __nuxt_component_4 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-77a8ddde"]]);
 const defaults = {
   ignoreUnknown: false,
   respectType: false,
@@ -7342,7 +7387,7 @@ const routes = [
     children: [],
     meta: meta$3,
     alias: [],
-    component: () => import('./_...slug_.c300560b.mjs')
+    component: () => import('./_...slug_.87da12c8.mjs')
   },
   {
     name: "blog",
@@ -7351,7 +7396,7 @@ const routes = [
     children: [],
     meta: meta$2,
     alias: (meta$2 == null ? void 0 : meta$2.alias) || [],
-    component: () => import('./index.bbfe8a2a.mjs')
+    component: () => import('./index.1951b03e.mjs')
   },
   {
     name: "blog-tags-slug",
@@ -7360,7 +7405,7 @@ const routes = [
     children: [],
     meta: meta$1,
     alias: [],
-    component: () => import('./_slug_.6c34fe86.mjs')
+    component: () => import('./_slug_.9f94688c.mjs')
   },
   {
     name: "index",
@@ -7369,7 +7414,7 @@ const routes = [
     children: [],
     meta,
     alias: [],
-    component: () => import('./index.80a2f653.mjs')
+    component: () => import('./index.503fe367.mjs')
   }
 ];
 const configRouterOptions = {};
@@ -7513,7 +7558,7 @@ const _sfc_main$3 = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = vue_cjs_prod.defineAsyncComponent(() => import('./error-component.4919c379.mjs'));
+    const ErrorComponent = vue_cjs_prod.defineAsyncComponent(() => import('./error-component.6b55d73a.mjs'));
     const nuxtApp = useNuxtApp();
     nuxtApp.hooks.callHookWith((hooks) => hooks.map((hook) => hook()), "vue:setup");
     const error = useError();
@@ -7651,5 +7696,5 @@ const plugins = normalizePlugins(_plugins);
 }
 const entry$1 = (ctx) => entry(ctx);
 
-export { ContentQuery as C, _export_sfc as _, useRoute as a, __nuxt_component_1$2 as b, useHead as c, useCookie as d, entry$1 as default, useAsyncData as e, __nuxt_component_0$3 as f, __nuxt_component_0$2 as g, hash as h, __nuxt_component_2 as i, jsonStringify as j, __nuxt_component_3 as k, __nuxt_component_0$1 as l, __nuxt_component_1$1 as m, queryContent as q, useUnwrap as u, withContentBase as w };
+export { ContentQuery as C, _export_sfc as _, useRoute as a, __nuxt_component_1$2 as b, useHead as c, useCookie as d, entry$1 as default, useAsyncData as e, __nuxt_component_0$3 as f, __nuxt_component_0$2 as g, hash as h, __nuxt_component_2 as i, jsonStringify as j, __nuxt_component_3 as k, __nuxt_component_4 as l, __nuxt_component_0$1 as m, __nuxt_component_1$1 as n, queryContent as q, useUnwrap as u, withContentBase as w };
 //# sourceMappingURL=server.mjs.map

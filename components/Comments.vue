@@ -1,7 +1,7 @@
 <script setup>
-import { VueRecaptcha } from 'vue-recaptcha';
+//import { VueRecaptcha } from 'vue-recaptcha';
 const config = useRuntimeConfig();
-import Comment from './Comment.vue';
+//import Comment from './Comment.vue';
 
 const props = defineProps(['slug']);
 
@@ -108,11 +108,11 @@ async function submitComment() {
         </div>
 
         <div class="form-control">
-          <vue-recaptcha
-            @verify="handleRecaptchaSuccess"
-            @error="handleRecaptchaError"
-            :sitekey="config.public.reCaptchaSiteKey"
-          ></vue-recaptcha>
+            <!--<vue-recaptcha
+              @verify="handleRecaptchaSuccess"
+              @error="handleRecaptchaError"
+              :sitekey="config.public.reCaptchaSiteKey"
+            ></vue-recaptcha>-->
         </div>
 
         <button type="submit" class="comment-btn">

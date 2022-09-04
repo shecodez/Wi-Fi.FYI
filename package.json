@@ -15,7 +15,6 @@
     "prettier": "^2.7.1"
   },
   "dependencies": {
-    "date-fns": "^2.29.1",
-    "vue-recaptcha": "^2.0.2"
+    "date-fns": "^2.29.1"
   }
 }

@@ -8,11 +8,9 @@ specifiers:
   date-fns: ^2.29.1
   nuxt: ^3.0.0-rc.4
   prettier: ^2.7.1
-  vue-recaptcha: ^2.0.2
 
 dependencies:
   date-fns: 2.29.1
-  vue-recaptcha: 2.0.2
 
 devDependencies:
   '@heroicons/vue': 1.0.6
@@ -6343,31 +6341,6 @@ packages:
     dependencies:
       bundle-runner: 0.0.1
     dev: true
-
-  /vue-demi/0.12.5:
-    resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==}
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dev: false
-
-  /vue-recaptcha/2.0.2:
-    resolution: {integrity: sha512-bE5WMz9jyiiY1PlaBOSUvsgTZ/ONoRV7Oq4Fn4JVz//ul+DJ0LHIJERfoF0NNEIDWXv6GjhwGLveGhoq0sEerg==}
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-beta.1
-      vue: ^2.0.0 || ^3.0.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      vue-demi: 0.12.5
-    dev: false
 
   /vue-router/4.1.3_vue@3.2.37:
     resolution: {integrity: sha512-XvK81bcYglKiayT7/vYAg/f36ExPC4t90R/HIpzrZ5x+17BOWptXLCrEPufGgZeuq68ww4ekSIMBZY1qdUdfjA==}
