@@ -1,7 +1,8 @@
 [build]
-command = "npm run generate"
-publish = "dist"
-environment = { NODE_VERSION = "18.6.0", NPM_VERSION = "8.13.2" }
+  publish = "dist"
+  command = "npm run generate -- --no-build --NODE_ENV PRODUCTION"
 
-# [[plugins]]
-# package = "netlify-plugin-subfont"
+[context.master]
+  publish = "dist"
+  command = "npm run incremental-build"
+  environment = { NODE_ENV = "PRODUCTION"}
