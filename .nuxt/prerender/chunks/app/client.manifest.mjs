@@ -446,40 +446,40 @@ const client_manifest = {
     "file": "InfoBox.e092879a.css",
     "src": "components/content/InfoBox.css"
   },
+  "pages/index.css": {
+    "resourceType": "style",
+    "file": "index.09cb69ea.css",
+    "src": "pages/index.css"
+  },
   "node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/components/Prose/ProseCode.css": {
     "resourceType": "style",
     "file": "ProseCode.e63e49c6.css",
     "src": "node_modules/.pnpm/@nuxt+content@2.0.1/node_modules/@nuxt/content/dist/runtime/components/Prose/ProseCode.css"
-  },
-  "pages/blog/[...slug].css": {
-    "resourceType": "style",
-    "file": "_...slug_.ef16510f.css",
-    "src": "pages/blog/[...slug].css"
-  },
-  "node_modules/.pnpm/@nuxt+ui-templates@0.3.3/node_modules/@nuxt/ui-templates/dist/templates/error-404.css": {
-    "resourceType": "style",
-    "file": "error-404.7fd0d283.css",
-    "src": "node_modules/.pnpm/@nuxt+ui-templates@0.3.3/node_modules/@nuxt/ui-templates/dist/templates/error-404.css"
   },
   "pages/blog/index.css": {
     "resourceType": "style",
     "file": "index.9ad18aea.css",
     "src": "pages/blog/index.css"
   },
+  "node_modules/.pnpm/@nuxt+ui-templates@0.3.3/node_modules/@nuxt/ui-templates/dist/templates/error-404.css": {
+    "resourceType": "style",
+    "file": "error-404.7fd0d283.css",
+    "src": "node_modules/.pnpm/@nuxt+ui-templates@0.3.3/node_modules/@nuxt/ui-templates/dist/templates/error-404.css"
+  },
   "node_modules/.pnpm/@nuxt+ui-templates@0.3.3/node_modules/@nuxt/ui-templates/dist/templates/error-500.css": {
     "resourceType": "style",
     "file": "error-500.82232cac.css",
     "src": "node_modules/.pnpm/@nuxt+ui-templates@0.3.3/node_modules/@nuxt/ui-templates/dist/templates/error-500.css"
   },
-  "pages/index.css": {
-    "resourceType": "style",
-    "file": "index.09cb69ea.css",
-    "src": "pages/index.css"
-  },
   "node_modules/.pnpm/nuxt@3.0.0-rc.9/node_modules/nuxt/dist/app/entry.css": {
     "resourceType": "style",
     "file": "entry.c4b4c95a.css",
     "src": "node_modules/.pnpm/nuxt@3.0.0-rc.9/node_modules/nuxt/dist/app/entry.css"
+  },
+  "pages/blog/[...slug].css": {
+    "resourceType": "style",
+    "file": "_...slug_.ef16510f.css",
+    "src": "pages/blog/[...slug].css"
   }
 };
 
