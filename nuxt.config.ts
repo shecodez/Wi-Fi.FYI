@@ -4,42 +4,6 @@ import * as siteConfig from './content/site/info.json'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  // Target (https://go.nuxtjs.dev/config-target)
-  target: 'static',
-
-  // Environment variables: https://nuxtjs.org/api/configuration-env/
-  env: {
-    url:
-      process.env.NODE_ENV === 'production'
-        ? process.env.URL || 'http://createADotEnvFileAndSetURL'
-        : 'http://localhost:3000',
-    lang: 'en-US',
-  },
-
-  // Global page headers (https://go.nuxtjs.dev/config-head)
-  head: {
-    title: siteConfig.sitename || process.env.npm_package_name || '',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          siteConfig.sitedescription ||
-          process.env.npm_package_description ||
-          '',
-      },
-    ],
-  },
-
-  generate: {
-    //fallback: true,
-    exclude: [
-      /^\/admin/, // path starts with /admin
-    ],
-  },
-
   modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
   
   content: {
