@@ -1,17 +1,17 @@
 import 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/node-fetch-native@0.1.4/node_modules/node-fetch-native/dist/polyfill.mjs';
-import { defineEventHandler, handleCacheHeaders, createEvent, useQuery, useCookie, createError, defineLazyEventHandler, useBody, createApp, createRouter, lazyEventHandler } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/h3@0.7.14/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, createEvent, useQuery, useCookie, createError, defineLazyEventHandler, useBody, createApp, createRouter, lazyEventHandler } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/h3@0.7.21/node_modules/h3/dist/index.mjs';
 import { createFetch as createFetch$1, Headers } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/ohmyfetch@0.4.18/node_modules/ohmyfetch/dist/node.mjs';
 import destr from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/destr@1.1.1/node_modules/destr/dist/index.mjs';
 import { createRouter as createRouter$1 } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/radix3@0.1.2/node_modules/radix3/dist/index.mjs';
-import { createCall, createFetch } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/unenv@0.5.3/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/hookable@5.1.1/node_modules/hookable/dist/index.mjs';
+import { createCall, createFetch } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/unenv@0.6.2/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/hookable@5.3.0/node_modules/hookable/dist/index.mjs';
 import { snakeCase, kebabCase, pascalCase } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/scule@0.2.1/node_modules/scule/dist/index.mjs';
 import { hash } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/ohash@0.1.5/node_modules/ohash/dist/index.mjs';
 import { parseURL, withQuery, withLeadingSlash, withoutTrailingSlash, withBase, joinURL } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/ufo@0.8.5/node_modules/ufo/dist/index.mjs';
 import { createStorage, prefixStorage } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/unstorage@0.4.2/node_modules/unstorage/dist/index.mjs';
-import _unstorage_drivers_fs from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/unstorage@0.4.2/node_modules/unstorage/dist/drivers/fs.mjs';
+import unstorage_47drivers_47fs from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/unstorage@0.4.2/node_modules/unstorage/dist/drivers/fs.mjs';
 import { extname } from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/pathe@0.3.3/node_modules/pathe/dist/index.mjs';
-import defu from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/defu@6.0.0/node_modules/defu/dist/defu.mjs';
+import defu from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/defu@6.1.0/node_modules/defu/dist/defu.mjs';
 import remarkEmoji from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/remark-emoji@3.0.2/node_modules/remark-emoji/index.js';
 import rehypeSlug from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/rehype-slug@5.0.1/node_modules/rehype-slug/index.js';
 import remarkSqueezeParagraphs from 'file:///Users/nicole/dev/vvifi-fyi/node_modules/.pnpm/remark-squeeze-paragraphs@5.0.1/node_modules/remark-squeeze-paragraphs/index.js';
@@ -103,7 +103,7 @@ const serverAssets = [{"baseName":"server","dir":"/Users/nicole/dev/vvifi-fyi/se
 const assets = createStorage();
 
 for (const asset of serverAssets) {
-  assets.mount(asset.baseName, _unstorage_drivers_fs({ base: asset.dir }));
+  assets.mount(asset.baseName, unstorage_47drivers_47fs({ base: asset.dir }));
 }
 
 const storage = createStorage({});
@@ -112,11 +112,11 @@ const useStorage = () => storage;
 
 storage.mount('/assets', assets);
 
-storage.mount('content:source:content', _unstorage_drivers_fs({"name":"content","driver":"fs","prefix":"","base":"/Users/nicole/dev/vvifi-fyi/content","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('root', _unstorage_drivers_fs({"driver":"fs","base":"/Users/nicole/dev/vvifi-fyi","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', _unstorage_drivers_fs({"driver":"fs","base":"/Users/nicole/dev/vvifi-fyi/server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', _unstorage_drivers_fs({"driver":"fs","base":"/Users/nicole/dev/vvifi-fyi/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', _unstorage_drivers_fs({"driver":"fs","base":"/Users/nicole/dev/vvifi-fyi/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('content:source:content', unstorage_47drivers_47fs({"name":"content","driver":"fs","prefix":"","base":"/Users/nicole/dev/vvifi-fyi/content","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/nicole/dev/vvifi-fyi","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/nicole/dev/vvifi-fyi/server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/nicole/dev/vvifi-fyi/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/nicole/dev/vvifi-fyi/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
 
 const defaultCacheOptions = {
   name: "_",
@@ -311,31 +311,39 @@ function normalizeError(error) {
   };
 }
 
-const errorHandler = (async function errorhandler(_error, event) {
-  const { stack, statusCode, statusMessage, message } = normalizeError(_error);
+const errorHandler = (async function errorhandler(error, event) {
+  const { stack, statusCode, statusMessage, message } = normalizeError(error);
   const errorObject = {
     url: event.req.url,
     statusCode,
     statusMessage,
     message,
-    description: "",
-    data: _error.data
+    stack: "",
+    data: error.data
   };
   event.res.statusCode = errorObject.statusCode;
   event.res.statusMessage = errorObject.statusMessage;
-  if (errorObject.statusCode !== 404) {
-    console.error("[nuxt] [request error]", errorObject.message + "\n" + stack.map((l) => "  " + l.text).join("  \n"));
+  if (error.unhandled || error.fatal) {
+    const tags = [
+      "[nuxt]",
+      "[request error]",
+      error.unhandled && "[unhandled]",
+      error.fatal && "[fatal]",
+      Number(errorObject.statusCode) !== 200 && `[${errorObject.statusCode}]`
+    ].filter(Boolean).join(" ");
+    console.error(tags, errorObject.message + "\n" + stack.map((l) => "  " + l.text).join("  \n"));
   }
   if (isJsonRequest(event)) {
     event.res.setHeader("Content-Type", "application/json");
     event.res.end(JSON.stringify(errorObject));
     return;
   }
-  const url = withQuery("/__nuxt_error", errorObject);
-  const html = await $fetch(url).catch((error) => {
-    console.error("[nitro] Error while generating error response", error);
-    return errorObject.statusMessage;
-  });
+  const isErrorPage = event.req.url?.startsWith("/__nuxt_error");
+  let html = !isErrorPage ? await $fetch(withQuery("/__nuxt_error", errorObject)).catch(() => null) : null;
+  if (!html) {
+    const { template } = await import('../error-500.mjs');
+    html = template(errorObject);
+  }
   event.res.setHeader("Content-Type", "text/html;charset=UTF-8");
   event.res.end(html);
 });
@@ -3568,7 +3576,7 @@ const _xY18Ip = defineLazyEventHandler(async () => {
   };
 });
 
-const _lazy_cQaRKT = () => import('../renderer.mjs').then(function (n) { return n.r; });
+const _lazy_6yAxB7 = () => import('../renderer.mjs');
 
 const handlers = [
   { route: '/api/_content/query/:qid', handler: _Qe6D2k, lazy: false, middleware: false, method: "get" },
@@ -3577,7 +3585,7 @@ const handlers = [
   { route: '/api/_content/navigation/:qid', handler: _Vpk71n, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/navigation', handler: _Vpk71n, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/highlight', handler: _xY18Ip, lazy: false, middleware: false, method: "post" },
-  { route: '/**', handler: _lazy_cQaRKT, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_6yAxB7, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -3632,5 +3640,5 @@ const localFetch = nitroApp.localFetch;
   process.on("uncaughtException", (err) => console.error("[nitro] [dev] [uncaughtException] " + err));
 }
 
-export { localFetch as l, useRuntimeConfig as u };
+export { useRuntimeConfig as a, localFetch as l, useNitroApp as u };
 //# sourceMappingURL=nitro-prerenderer.mjs.map

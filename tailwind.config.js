@@ -1,11 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode:'jit',
-  content: [],
   theme: {
     extend: {},
   },
   plugins: [
     require('@tailwindcss/typography')
   ],
+  content: [
+    `components/**/*.{vue,js}`,
+    `layouts/**/*.vue`,
+    `pages/**/*.vue`,
+    `composables/**/*.{js,ts}`,
+    `plugins/**/*.{js,ts}`,
+    `App.{js,ts,vue}`,
+    `app.{js,ts,vue}`,
+    `content/**/*.md`
+  ]
 }

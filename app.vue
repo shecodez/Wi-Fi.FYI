@@ -8,10 +8,12 @@
   </div>
 </template>
 
-<script setup>
-useHead({
-  meta: [
-    { name: 'p:domain_verify', content: 'fe34bfe97aff276718eecaae512c3517' }
-  ],
-})
+<script lang="ts" setup>
+  import './assets/css/tailwind.css'
+
+  useHead({
+    meta: [
+      { name: 'p:domain_verify', content: 'fe34bfe97aff276718eecaae512c3517' }
+    ],
+  })
 </script>

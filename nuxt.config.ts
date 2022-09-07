@@ -41,6 +41,7 @@ export default defineNuxtConfig({
   },
 
   modules: ['@nuxt/content', '@nuxtjs/tailwindcss'],
+  
   content: {
     // https://content.nuxtjs.org/api/configuration
     highlight: {
@@ -53,9 +54,11 @@ export default defineNuxtConfig({
       },
     }
   },
+  
   tailwindcss: {
-    cssPath: '~/assets/css/main.css'
+    cssPath: '~/assets/css/tailwind.css'
   },
+
   runtimeConfig: {
     // Private config that is only available on the server
     // apiSecret: '123',
