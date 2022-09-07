@@ -96,3 +96,4 @@ sw.*
 
 # https://answers.netlify.com/t/nuxt-3-rc3-failing-to-build-during-deployment/60505/4
 dist
+./dist
