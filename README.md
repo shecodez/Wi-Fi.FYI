@@ -1,6 +1,6 @@
-# Tokyo Toolkit
+# VviFi FYI
 
-A place for hosting and posting DIY interior / exterior design tutorials, workshops, documentaries, interviews, reviews, podcasts, and exploration. A space for community, global communication, and all things Japan.
+A place for hosting and posting tech and game, tutorials, reviews, podcasts, and exploration. A space for community, global communication, and all the things nerd herd.
 
 template: https://github.com/antfu/vitesse-nuxt3
 
