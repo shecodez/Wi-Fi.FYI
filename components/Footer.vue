@@ -1,14 +1,12 @@
 <template>
-    <footer class="site-footer">
-        <p>
-            <span>&copy; {{ new Date().getFullYear() }} &nbsp;</span> 
-            <a href="https://shecodez.com" target="_blank">shecodez</a>
-        </p>
-    </footer>
+  <div
+    text="xl gray4"
+    m-5
+    flex
+    justify-center
+    gap-3
+  >
+    <NuxtLink i-carbon-campsite to="/" />
+    <DarkToggle />
+  </div>
 </template>
-
-<style scoped>
-.site-footer {
-    @apply bg-slate-100 flex p-4 items-center justify-center;
-}
-</style>

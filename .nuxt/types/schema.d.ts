@@ -1,8 +1,10 @@
 import { NuxtModule } from '@nuxt/schema'
 declare module '@nuxt/schema' {
   interface NuxtConfig {
+    ["pinia"]?: typeof import("@pinia/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["colorMode"]?: typeof import("@nuxtjs/color-mode").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["tailwindcss"]?: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["formkit"]?: typeof import("@formkit/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
   }
   interface RuntimeConfig {
@@ -17,15 +19,23 @@ declare module '@nuxt/schema' {
     content: {
         cacheVersion: number,
 
-        cacheIntegerity: string,
+        cacheIntegrity: string,
 
-        transformers: Array<string>,
+        transformers: Array<any>,
 
         base: string,
 
-        watch: boolean,
+        watch: {
+             ws: {
+                   port: number,
 
-        sources: Array<string>,
+                   hostname: string,
+
+                   showURL: boolean,
+             },
+        },
+
+        sources: any,
 
         ignores: Array<string>,
 
@@ -33,9 +43,7 @@ declare module '@nuxt/schema' {
 
         defaultLocale: any,
 
-        highlight: {
-             theme: string,
-        },
+        highlight: boolean,
 
         markdown: {
              tags: {
@@ -88,30 +96,48 @@ declare module '@nuxt/schema' {
                    tr: string,
              },
 
-             toc: {
+             anchorLinks: {
                    depth: number,
 
-                   searchDepth: number,
+                   exclude: Array<number>,
              },
 
-             rehypePlugins: Array<any>,
+             remarkPlugins: any,
 
-             remarkPlugins: Array<any>,
+             rehypePlugins: any,
         },
 
         yaml: any,
 
-        csv: any,
+        csv: {
+             delimeter: string,
+
+             json: boolean,
+        },
 
         navigation: {
              fields: Array<any>,
         },
+
+        documentDriven: boolean,
+
+        experimental: {
+             clientDB: boolean,
+        },
     },
   }
   interface PublicRuntimeConfig {
-     reCaptchaSiteKey: string,
+     content: {
+        clientDB: {
+             isSPA: boolean,
 
-    content: {
+             integrity: any,
+        },
+
+        navigation: {
+             fields: Array<any>,
+        },
+
         base: string,
 
         tags: {
@@ -164,11 +190,17 @@ declare module '@nuxt/schema' {
              tr: string,
         },
 
-        highlight: {
-             theme: string,
-        },
+        highlight: boolean,
 
         wsUrl: string,
+
+        documentDriven: boolean,
+
+        anchorLinks: {
+             depth: number,
+
+             exclude: Array<number>,
+        },
     },
   }
 }

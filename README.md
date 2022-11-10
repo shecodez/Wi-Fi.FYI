@@ -1,47 +1,41 @@
-# Content v2 Minimal Starter
+# Tokyo Toolkit
 
-Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
+A place for hosting and posting DIY interior / exterior design tutorials, workshops, documentaries, interviews, reviews, podcasts, and exploration. A space for community, global communication, and all things Japan.
 
-## Setup
+template: https://github.com/antfu/vitesse-nuxt3
 
-Make sure to install the dependencies:
+## Stack
 
-```bash
-# yarn
-yarn install
+- [💚 Nuxt 3](https://v3.nuxtjs.org) - SSR, ESR, File-based routing, components auto importing, modules, etc.
 
-# npm
-npm install
+- ⚡️ Vite - Instant HMR
 
-# pnpm
-pnpm install --shamefully-hoist
-```
+- 🎨 [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
 
-## Development Server
+- 😃 Use icons from any icon sets in Pure CSS, powered by [UnoCSS](https://github.com/antfu/unocss)
 
-Start the development server on http://localhost:3000
+- 🔥 The `<script setup>` syntax
 
-```bash
-npm run dev
-```
+- 🍍 [State Management via Pinia](https://pinia.esm.dev), see [./composables/user.ts](./composables/user.ts)
 
-## Production
+- 📑 [Layout system](./layouts)
 
-Build the application for production:
+- 📥 APIs auto importing - for Composition API, VueUse and custom composables.
 
-```bash
-npm run build
-```
+- 🏎 Zero-config cloud functions and deploy
 
-Locally preview production build:
+- 🦾 TypeScript, of course
 
-```bash
-npm run preview
-```
+### Nuxt Modules
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
+- [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs.
+- [ColorMode](https://github.com/nuxt-community/color-mode-module) - dark and Light mode with auto detection made easy with Nuxt.
+- [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine.
+- [Pinia](https://pinia.esm.dev/) - intuitive, type safe, light and flexible Store for Vue.
+- [Content](https://content.nuxtjs.org) - Document driven mode content made easy for Vue Developers.
 
 ## notes
-To encrypt the secret keys with your staticmain Heroku app enter the following URL in your browser with your corresponding Heroku app name (<heroku_staticman_app>) and secret key (<secret_key>) :
+To encrypt the secret keys with your staticman Heroku app enter the following URL in your browser with your corresponding Heroku app name (<heroku_staticman_app>) and secret key (<secret_key>) :
 
 `https://<heroku_staticman_app>.herokuapp.com/v3/encrypt/<secret_key>`
+

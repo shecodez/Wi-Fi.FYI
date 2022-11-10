@@ -1,5 +1,5 @@
-site_url: https://vvifi-fyi.netlify.app/
-logo_url: https://vvifi-fyi.netlify.app/icon.png
+site_url: https://vvifi.netlify.app/
+logo_url: https://vvifi.netlify.app/vvifi-banner.png
 
 publish_mode: editorial_workflow
 backend:

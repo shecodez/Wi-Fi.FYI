@@ -1,19 +1,29 @@
+<script setup>
+useHead({
+  title: 'VviFi FYI',
+  link: [
+    {
+      rel: 'icon', type: 'image/png', href: '/favicon.ico',
+    },
+  ],
+})
+</script>
+
 <template>
-  <div class="min-h-screen flex flex-col">
-    <Header />
-    <div class="flex-1">
-      <NuxtPage />
-    </div>
-    <Footer />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
-<script lang="ts" setup>
-  import './assets/css/tailwind.css'
+<style>
+html, body , #__nuxt{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
-  useHead({
-    meta: [
-      { name: 'p:domain_verify', content: 'fe34bfe97aff276718eecaae512c3517' }
-    ],
-  })
-</script>
+html.dark {
+  background: #222;
+  color: white;
+}
+</style>
