@@ -1,4 +1,6 @@
 <script setup>
+// import './assets/styles/main.css'
+
 useHead({
   title: 'VviFi FYI',
   link: [
