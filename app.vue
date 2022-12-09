@@ -28,4 +28,7 @@ html.dark {
   background: #222;
   color: white;
 }
+blockquote {
+  border-left: 2px solid #dc9e45 !important;
+}
 </style>

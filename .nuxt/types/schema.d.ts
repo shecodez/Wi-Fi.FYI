@@ -16,6 +16,8 @@ declare module '@nuxt/schema' {
         cdnURL: string,
     },
 
+    apiSecret: string,
+
     content: {
         cacheVersion: number,
 
@@ -127,7 +129,13 @@ declare module '@nuxt/schema' {
     },
   }
   interface PublicRuntimeConfig {
-     content: {
+     appName: string,
+
+    appDescription: string,
+
+    siteUrl: string,
+
+    content: {
         clientDB: {
              isSPA: boolean,
 

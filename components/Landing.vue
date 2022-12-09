@@ -46,14 +46,14 @@ function resetEyes() {
     <div relative>
       <img absolute alt="VviFi Avatar blinking" src="/under-construction-avatar-eye-closed-smile.png" class="a-blink-layer">
       <img absolute alt="VviFi Avatar sclera" src="/avatar-anim-layers/under-construction-avatar-eye-open-smile-bottom-layer.png" class="a-layer">
-      <!-- <img ref="eye" absolute alt="VviFi Avatar iris & pupil" src="/avatar-anim-layers/under-construction-avatar-eye-open-smile-move-layer.png" class="a-layer move-layer"> -->
-      <div ref="eye" absolute h-full w-full :style="{ backgroundImage: 'url(/avatar-anim-layers/under-construction-avatar-eye-open-smile-move-layer.png)', transform: translate }" class="a-layer move-layer" />
+      <img absolute md-hidden alt="VviFi Avatar iris & pupil" src="/avatar-anim-layers/under-construction-avatar-eye-open-smile-move-layer.png" class="a-layer">
+      <div ref="eye" absolute h-full w-full hidden md-block :style="{ backgroundImage: 'url(/avatar-anim-layers/under-construction-avatar-eye-open-smile-move-layer.png)', transform: translate }" class="a-layer move-layer" />
       <img relative alt="VviFi Avatar face" src="/avatar-anim-layers/under-construction-avatar-eye-open-smile-top-layer.png" class="a-layer">
     </div>
   </div>
 
   <h2 text-3xl font-black uppercase>
-    🚧 Site under construction. 👷‍♀️
+    🚧 Site under construction 🚧
   </h2>
   <div>~❤️ VviFi</div>
   <div flex gap-2 justify-center items-center text="xl gray4">
@@ -63,6 +63,9 @@ function resetEyes() {
     <a href="https://www.pinterest.com/vvifi_fyi/">
       <div i-carbon:logo-pinterest><span sr-only>Pinterest</span></div>
     </a> ·
+    <!-- <a href="https://www.tiktok.com/@vvifi_fyi">
+      <div ic:round-tiktok><span sr-only>Tik Tok</span></div>
+    </a> · -->
     <a href="https://www.twitch.tv/vvifi_fyi">
       <div i-mdi:twitch>Twitch<span sr-only>Twitch</span></div>
     </a> ·

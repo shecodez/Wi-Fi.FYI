@@ -1,6 +1,10 @@
 <template>
-  <main class="py-20 px-10 text-center">
-    <slot />
+  <div min-h-screen flex flex-col>
+    <Header />
+    <main ref="main">
+      <slot />
+    </main>
     <Footer />
-  </main>
+    <!-- <SocialLinksMenu /> -->
+  </div>
 </template>
