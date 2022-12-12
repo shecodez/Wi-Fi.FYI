@@ -45,16 +45,12 @@ h5,
   /* @apply bg-gradient-to-r from-primary to-cyan-400; */
 }
 
-/* Headings */
-.title {
-  font-size: 3rem/* 48px */;
-  line-height: 1;
-  /* @apply text-5xl; */
-}
 
 /* Form */
 input[required],
-textarea[required] {
+textarea[required],
+input.required,
+textarea.required {
   background-image: radial-gradient(#f00 15%, transparent 16%), radial-gradient(#f00 15%, transparent 16%);
   background-size: 1.2em 1.2em;
   background-position: right top;

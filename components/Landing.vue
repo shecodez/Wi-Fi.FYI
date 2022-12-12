@@ -41,14 +41,14 @@ function resetEyes() {
 </script>
 
 <template>
-  <img alt="VviFi Banner Logo" src="/vvifi-banner.png" class="banner">
+  <img alt="VviFi Banner Logo" src="/images/logos/vvifi-banner.png" class="banner">
   <div flex flex-col children:mx-auto class="avatar">
     <div relative>
-      <img absolute alt="VviFi Avatar blinking" src="/under-construction-avatar-eye-closed-smile.png" class="a-blink-layer">
-      <img absolute alt="VviFi Avatar sclera" src="/avatar-anim-layers/under-construction-avatar-eye-open-smile-bottom-layer.png" class="a-layer">
-      <img absolute md-hidden alt="VviFi Avatar iris & pupil" src="/avatar-anim-layers/under-construction-avatar-eye-open-smile-move-layer.png" class="a-layer">
-      <div ref="eye" absolute h-full w-full hidden md-block :style="{ backgroundImage: 'url(/avatar-anim-layers/under-construction-avatar-eye-open-smile-move-layer.png)', transform: translate }" class="a-layer move-layer" />
-      <img relative alt="VviFi Avatar face" src="/avatar-anim-layers/under-construction-avatar-eye-open-smile-top-layer.png" class="a-layer">
+      <img absolute alt="VviFi Avatar blinking" src="/avatar/under-construction-avatar-eye-closed-smile.png" class="a-blink-layer">
+      <img absolute alt="VviFi Avatar sclera" src="/avatar/animation/under-construction-avatar-eye-open-smile-bottom-layer.png" class="a-layer">
+      <img absolute md-hidden alt="VviFi Avatar iris & pupil" src="/avatar/animation/under-construction-avatar-eye-open-smile-move-layer.png" class="a-layer">
+      <div ref="eye" absolute h-full w-full hidden md-block :style="{ backgroundImage: 'url(/avatar/animation/under-construction-avatar-eye-open-smile-move-layer.png)', transform: translate }" class="a-layer move-layer" />
+      <img relative alt="VviFi Avatar face" src="/avatar/animation/under-construction-avatar-eye-open-smile-top-layer.png" class="a-layer">
     </div>
   </div>
 

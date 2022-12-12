@@ -23,7 +23,7 @@ const topicBgSrc = new Map([
         <ContentNavigation v-slot="{ navigation }" :query="blogNavQuery">
           <template v-for="link of navigation[0].children" :key="link._path">
             <NuxtLink :to="`/topics/${link.title}`" relative filter-grayscale-100 hover:filter-grayscale-0>
-              <img :src="`/topic-bgs/${link.title}.jpg`" :alt="link.title" rounded-2xl h-60 w-full object-cover>
+              <img :src="`/images/topic-bgs/${link.title}.jpg`" :alt="link.title" rounded-2xl h-60 w-full object-cover>
               <span absolute inset-0 p-3 text-7xl font-bold> {{ link.title }}</span>
               <span absolute bottom-0 right-3>Photo by: {{ topicBgSrc.get(link.title) }}</span>
             </NuxtLink>

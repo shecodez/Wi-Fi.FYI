@@ -1,67 +1,74 @@
 <script setup>
-// import { formatDate } from '~~/utils'
+import { formatDate } from '~~/utils'
 
 defineProps(['data'])
 </script>
 
 <template>
-  <div class="post-container px-4 lg:px-0 py-4 max-w-5xl m-auto">
-    <NuxtLink to="/blog" class="flex items-center gap-2 hover:text-teal-500">
-      <div class="i-carbon:arrow-left" />
+  <div container mx-auto py-4>
+    <NuxtLink to="/blog" flex items-center gap-2 hover:text-teal-500>
+      <div i-carbon:arrow-left />
       Back to Blog
     </NuxtLink>
 
-    <header v-if="data.post" class="post-header py-4">
-      <div v-if="data.post.cover_image" class="cover-img-container h-72 mb-12">
-        <img :src="`/${data.post.cover_image}`" :alt="data.post.title" class="rounded-2xl h-full w-full object-cover">
+    <header v-if="data.post" py-4>
+      <div v-if="data.post.cover_image" h-96 mb-12>
+        <img :src="`/${data.post.cover_image}`" :alt="data.post.title" rounded-2xl h-full w-full object-cover>
       </div>
-      <!-- <small v-if="data.post.date" class="text-xs">{{ formatDate(new Date(data.post.date)) }}</small> -->
-      <small v-if="data.post.date" class="text-xs">{{ data.post.date }}</small>
-      <h1 class="rainbow-text title font-extrabold text-5xl pb-4">
+
+      <div v-if="data.post.date" text-sm flex items-center gap-2>
+        <div i-carbon:time />
+        <span>{{ formatDate(new Date(data.post.date)) }}</span>
+      </div>
+
+      <h1 py-4 font-extrabold text-5xl max-w-5xl class="rainbow-text title">
         {{ data.post.title }}
       </h1>
-      <h4 v-if="data.post.author" class="text-gray-400">
+
+      <h4 v-if="data.post.author" text-gray-400>
         by: {{ data.post.author }}
       </h4>
-      <p class="topic font-medium text-lg">
-        in
-        <span class="uppercase text-teal-500">{{ data.post._path.split('/')[2].replace('-', ' ') }}</span>
-      </p>
+
+      <div font-medium text-lg flex items-center gap-2>
+        <div i-carbon:data-enrichment /> in
+        <NuxtLink :to="`/topics/${data.post._path.split('/')[2]}`" uppercase text-teal-500>
+          {{ data.post._path.split('/')[2].replace('-', ' ') }}
+        </NuxtLink>
+      </div>
       <br>
-      <ul v-if="data.post.tags" class="post-tags flex gap-2 py-2">
-        <li v-for="(tag, n) in data.post.tags" :key="n" class="tag rounded-md bg-gray-200 px-2 py-0.5 text-sm text-gray-900 transition-all hover:-translate-y-0.5">
-          {{ tag }}
-        </li>
-      </ul>
+
+      <TagList v-if="data.post.tags" :tags="data.post.tags" />
     </header>
     <hr class="border-primary">
 
-    <section class="post grid grid-cols-8 gap-8 pt-4">
-      <aside v-if="!!data.post.body.toc.links.length" class="left-aside col-span-full md:col-span-2 row-start-1 w-full mt-6">
-        <TableOfContents :links="data.post.body.toc.links" />
+    <section grid grid-cols-8 gap-4 pt-4 class="post">
+      <aside v-if="!!data.post.body.toc.links.length" col-span-full md:col-span-2 mt-6 class="left-aside">
+        <div sticky top-20>
+          <TableOfContents :links="data.post.body.toc.links" />
+        </div>
       </aside>
 
-      <article class="article first-letter:text-3xl first-letter:text-teal-500 col-span-full md:col-span-6 w-full prose dark:prose-invert prose-sm lg:prose-lg">
-        <client-only>
-          <ContentRenderer :value="data.post">
-            <template #empty>
-              <p>No content found.</p>
-            </template>
-          </ContentRenderer>
-        </client-only>
-      </article>
+      <div col-span-full col-span-4>
+        <article mx-auto first-letter:text-3xl first-letter:text-teal-500 prose dark:prose-invert class="article">
+          <client-only>
+            <ContentRenderer :value="data.post">
+              <template #empty>
+                <p>No content found.</p>
+              </template>
+            </ContentRenderer>
+          </client-only>
+        </article>
+      </div>
 
-      <!-- <aside class="right-aside">
-              <div class="border rounded-lg w-full h-96">Ad</div>
-            </aside>  -->
+      <aside col-span-full md:col-span-2 mt-6 class="right-aside">
+        <div sticky top-20>
+          <AnimatedAvatar />
+          <h4 text-center text-xl font-black>
+            Niico "VviFi" Savvy
+          </h4>
+        </div>
+      </aside>
     </section>
   </div>
 </template>
 
-<style scoped>
-aside > .toc {
-  position: sticky;
-  top: 1em;
-  /* @apply sticky top-24; */
-}
-</style>

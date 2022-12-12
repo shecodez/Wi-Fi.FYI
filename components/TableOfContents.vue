@@ -22,9 +22,8 @@ const flattenLinks = (links) => {
 
 <template>
   <nav my-1 p-4 border rounded overflow-auto class="toc max-h-[calc(100vh-10rem)]">
-    <header pt-2 mb-2 border-b>
-      <h3 text-xl font-bold flex gap-1 items-center>
-        <div class="i-carbon:list" />
+    <header pt-2 mb-2 border-b-2>
+      <h3 text-xl font-bold>
         Table of Contents
       </h3>
     </header>

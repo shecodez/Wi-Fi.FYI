@@ -1,0 +1,87 @@
+[
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "flex flex-col md:flex-row gap-3"
+    },
+    "children": [
+      {
+        "$formkit": "text",
+        "name": "name",
+        "label": "Name",
+        "placeholder": "Name",
+        "classes": {
+          "outer": "flex-1 md:mb-3",
+          "label": "sr-only",
+          "input": "p-3 w-full bg-gray-200 dark:bg-gray-900 required",
+          "message":"text-red text-xs"
+        },
+        "validation": "required|length:5,50"
+      },
+      {
+        "$formkit": "email",
+        "name": "email",
+        "label": "E-Mail",
+        "placeholder": "E-Mail",
+        "classes": {
+          "outer": "flex-1 mb-3",
+          "label": "sr-only",
+          "input": "required p-3 w-full bg-gray-200 dark:bg-gray-900",   
+          "message":"text-red text-xs"
+        },
+        "validation": "required|email"
+      }
+    ]
+  },
+  {
+    "$formkit": "text",
+    "name": "subject",
+    "label": "Subject",
+    "placeholder": "Subject",
+    "classes": {
+      "outer": "mb-3",
+      "label": "sr-only",
+      "input": "p-3 w-full bg-gray-200 dark:bg-gray-900",
+      "message":"text-red text-xs"
+    },
+    "validation": "length:0,55"
+  },
+  {
+    "$formkit": "hidden",
+    "name": "bot",
+    "placeholder": "This field is only for bots."
+  },
+  {
+    "$formkit": "textarea",
+    "id": "contactmessage",
+    "name": "message",
+    "label": "Message",
+    "placeholder": "Message",
+    "rows":"4",
+    "attrs": {
+      "onInput": "$handleMessageInput",
+      "value": "$_value"
+    },
+    "classes": {
+      "outer": "mb-3",
+      "label": "sr-only",
+      "input": "required p-3 w-full bg-gray-200 dark:bg-gray-900",
+      "message":"text-red text-xs",
+      "help": "text-xs text-gray-500 text-right"
+    },
+    "validation": "required|length:1,500",
+    "help": "0 / 500"
+  },
+  {
+    "$formkit": "submit",
+    "prefixIcon": "submit",
+    "classes": {
+      "input": "send-btn rainbow-bg px-8 py-2 mt-4 uppercase flex items-center gap-1"
+    },
+    "children": {
+      "if": "$loading",
+      "then": "Sending...",
+      "else": "Send"
+    }
+  }
+]

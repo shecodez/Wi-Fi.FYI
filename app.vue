@@ -1,5 +1,5 @@
 <script setup>
-// import './assets/styles/main.css'
+import './assets/styles/main.css'
 
 useHead({
   title: 'VviFi FYI',
@@ -24,10 +24,17 @@ html, body , #__nuxt{
   padding: 0;
 }
 
-html.dark {
-  background: #222;
-  color: white;
+body {
+  background-color: white;
+  color: #1f2937;
+  /* @apply bg-white text-gray-800; */
 }
+html.dark body {
+  background-color: #1f2937;
+  color: white;
+  /* @apply bg-gray-800 text-white; */
+}
+
 blockquote {
   border-left: 2px solid #dc9e45 !important;
 }

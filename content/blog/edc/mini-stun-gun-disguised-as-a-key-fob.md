@@ -20,10 +20,9 @@ If you're looking for a way to protect yourself, a stun gun can be an excellent 
 ### FYI #1
 High voltage does not equal power. In fact, voltage doesn’t even really matter; it’s the amperage (current) that kills. An electrical outlet, for example one in the US, typically has 120 volts but between 15-20 amps. It only takes one (1) amp to kill a person. Stun guns run off of high voltage, but low amperage in order to disable rather than kill someone.
 
-⚠️ **DISCLOSURE**: I only endorse things I personally use and love. Should you chose to purchase anything using my referral links, as an Amazon Associate, I may earn a small commission from qualifying purchases. However, there is absolutely NO extra cost to you. 
+⚠️ **DISCLOSURE** ⚠️ I only endorse things I personally use and love. Should you chose to purchase anything using my referral links, as an Amazon Associate, I may earn a small commission from qualifying purchases. However, there is absolutely NO extra cost to you. 
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;margin:auto" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vvifi-20&language=en_US&marketplace=amazon&region=US&placement=B0B3TPPTPP&asins=B0B3TPPTPP&linkId=ad3caf5cd2f2e43de0adbae1474cffb7&show_border=false&link_opens_in_new_window=true"></iframe>
-
 
 ## Pros and cons of using stun guns in self-defense
 Pro: Stun guns work in all weather including the wind and rain (unlike pepper spray). Con: a stun gun may not be the best option for a person who is physically weak and easily overpowered. If you’re not careful you could end up reverse uno-ed if the attacker takes the stun gun and directs it back at you. Luckily some stun guns are designed with a safety feature that disables the device if it’s pulled away from its wrist strap. Con: stun guns require close proximity and pain compliance to work, not to be confused with a TASER. Pro: today's stun guns can be very small and discreet but still deliver a high voltage punch with the element of surprise.
