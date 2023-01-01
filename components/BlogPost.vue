@@ -6,7 +6,7 @@ defineProps(['data'])
 
 <template>
   <div container mx-auto py-4>
-    <NuxtLink to="/blog" flex items-center gap-2 hover:text-teal-500>
+    <NuxtLink to="/blog" flex items-center gap-2 hover:text-orange>
       <div i-carbon:arrow-left />
       Back to Blog
     </NuxtLink>
@@ -31,7 +31,7 @@ defineProps(['data'])
 
       <div font-medium text-lg flex items-center gap-2>
         <div i-carbon:data-enrichment /> in
-        <NuxtLink :to="`/topics/${data.post._path.split('/')[2]}`" uppercase text-teal-500>
+        <NuxtLink :to="`/topics/${data.post._path.split('/')[2]}`" uppercase text-orange>
           {{ data.post._path.split('/')[2].replace('-', ' ') }}
         </NuxtLink>
       </div>
@@ -49,7 +49,7 @@ defineProps(['data'])
       </aside>
 
       <div col-span-full col-span-4>
-        <article mx-auto first-letter:text-3xl first-letter:text-teal-500 prose dark:prose-invert class="article">
+        <article mx-auto first-letter:text-3xl first-letter:text-orange prose dark:prose-invert class="article">
           <client-only>
             <ContentRenderer :value="data.post">
               <template #empty>

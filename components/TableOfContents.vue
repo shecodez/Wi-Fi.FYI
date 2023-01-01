@@ -24,7 +24,7 @@ const flattenLinks = (links) => {
   <nav my-1 p-4 border rounded overflow-auto class="toc max-h-[calc(100vh-10rem)]">
     <header pt-2 mb-2 border-b-2>
       <h3 text-xl font-bold>
-        Table of Contents
+        Outline
       </h3>
     </header>
     <ul flex flex-col gap-2 px-2>

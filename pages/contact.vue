@@ -58,7 +58,7 @@ useHead({
 </script>
 
 <template>
-  <div id="contact" relative flex items-center class="p-contact">
+  <div id="contact" relative flex items-center justify-end class="p-contact">
     <div id="map-container" absolute inset-0 bg-gray-300 dark:bg-gray-800>
       <iframe
         width="100%"
@@ -73,31 +73,29 @@ useHead({
       />
     </div>
 
-    <div container mx-auto h-full w-full>
-      <div relative z-10 ml-auto p-8 bg-white dark:bg-gray-800 shadow-md class="card md:w-2/3 lg:w-1/2 xl:w-1/3">
-        <h2 text-3xl lg:text-5xl font-bold mb-6 class="rainbow-text">
-          Get in Touch
-        </h2>
+    <div relative z-10 p-4 md:p-8 bg-white dark:bg-gray-800 shadow-md class="md:w-2/3 lg:w-1/2 xl:w-1/3 md:mr-20 lg:mr-40">
+      <h2 text-3xl lg:text-5xl font-bold mb-6 class="rainbow-text">
+        Get in Touch
+      </h2>
 
-        <p>
-          Have a question 🤔? Want to give feedback? Report a bug 🐞? et cetera. Please fill out this contact form
-          or you can
-          <a href="mailto:contact@vvifi.fyi" text-teal-500 hover:underline>contact@vvifi.fyi</a> via
-          email. 🥰
-        </p>
+      <p>
+        Have a question 🤔? Want to give feedback? Report a bug 🐞? et cetera. Please fill out this contact form
+        or you can
+        <a href="mailto:contact@vvifi.fyi" text-orange hover:underline>contact@vvifi.fyi</a> via
+        email. 🥰
+      </p>
 
-        <div v-if="state.isBot" class="alert bot-alert">
-          🍯 Oh honey pot! We think not, you're a bot!
-        </div>
-        <div v-if="state.sent" class="alert" :class="state.error ? 'error-alert' : 'success-alert'">
-          <span v-if="state.error">❗ {{ state.error }}</span>
-          <span v-else>✔️ Message sent. Thanks!</span>
-        </div>
-
-        <FormKit v-else id="contactform" v-model="contactForm" type="form" :actions="false" form-class="mt-6" @submit="postContactForm">
-          <FormKitSchema :schema="contactFormJson.body" :data="state" />
-        </FormKit>
+      <div v-if="state.isBot" class="alert bot-alert">
+        🍯 Oh honey pot! We think not, you're a bot!
       </div>
+      <div v-if="state.sent" class="alert" :class="state.error ? 'error-alert' : 'success-alert'">
+        <span v-if="state.error">❗ {{ state.error }}</span>
+        <span v-else>✔️ Message sent. Thanks!</span>
+      </div>
+
+      <FormKit v-else id="contactform" v-model="contactForm" type="form" :actions="false" form-class="mt-6" @submit="postContactForm">
+        <FormKitSchema :schema="contactFormJson.body" :data="state" />
+      </FormKit>
     </div>
   </div>
 </template>

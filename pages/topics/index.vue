@@ -9,6 +9,7 @@ useHead({
 const topicBgSrc = new Map([
   ['Edc', 'Karol D'],
   ['Travel', 'Aleksandar Pasaric'],
+  ['Wtf', 'Imani Williams'],
 ])
 </script>
 
@@ -18,13 +19,13 @@ const topicBgSrc = new Map([
       Topics
     </h1>
 
-    <section container mx-auto flex flex-col gap-4>
+    <section container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4>
       <client-only>
         <ContentNavigation v-slot="{ navigation }" :query="blogNavQuery">
           <template v-for="link of navigation[0].children" :key="link._path">
             <NuxtLink :to="`/topics/${link.title}`" relative filter-grayscale-100 hover:filter-grayscale-0>
               <img :src="`/images/topic-bgs/${link.title}.jpg`" :alt="link.title" rounded-2xl h-60 w-full object-cover>
-              <span absolute inset-0 p-3 text-7xl font-bold> {{ link.title }}</span>
+              <span absolute inset-0 p-3 text-7xl font-bold uppercase text-white> {{ link.title }}</span>
               <span absolute bottom-0 right-3>Photo by: {{ topicBgSrc.get(link.title) }}</span>
             </NuxtLink>
           </template>

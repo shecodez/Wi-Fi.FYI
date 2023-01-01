@@ -10,6 +10,7 @@ const edcMenu = [
 
 const blogTopicRoute = '/topics'
 const megaMenuNav = [
+  { label: 'Tech', href: `${blogTopicRoute}/tech`, subMenuNav: [] },
   { label: 'Her EDC', href: `${blogTopicRoute}/edc`, subMenuNav: edcMenu },
   { label: 'WTF', href: `${blogTopicRoute}/wtf`, title: 'Wonderful Treasure Finds', subMenuNav: [] },
   { label: 'Travel', href: `${blogTopicRoute}/travel`, subMenuNav: [] },
@@ -19,31 +20,50 @@ const megaMenuNav = [
 
 const menuNav = [
   { label: 'About', href: '/about' },
-  { label: 'VviFi🔥Hotspot', href: '/vvifi-hotspot' },
+  { label: 'VviFi 🔥Hotspot', href: '/vvifi-hotspot' },
   { label: 'Blog', href: '/blog', subMenuNav: megaMenuNav },
   { label: 'Topics', href: blogTopicRoute },
   { label: 'Tags', href: blogTagRoute },
   { label: 'Contact', href: '/contact' },
 ]
+
+const socialLinks = [
+  // {
+  //   icon: 'i-carbon:logo-discord',
+  //   label: 'Discord',
+  //   link: 'https://discord.gg/x2tr4fJu',
+  // },
+  { icon: 'i-carbon:logo-instagram', label: 'Instagram', link: 'https://www.instagram.com/vvifi_fyi/' },
+  { icon: 'i-carbon:logo-twitter', label: 'Twitter', link: 'https://twitter.com/vvifi_fyi' },
+  { icon: 'i-carbon:logo-youtube', label: 'YouTube', link: 'https://youtube.com/@vvifi_fyi' },
+  { icon: 'i-carbon:logo-pinterest', label: 'Pinterest', link: 'https://www.pinterest.com/vvifi_fyi/' },
+]
 </script>
 
 <template>
-  <header bg-white dark:bg-gray-800 bg-opacity-40 dark:bg-opacity-40 sticky top-0 z-50 shadow-md>
+  <header bg-gray-300 dark:bg-black bg-opacity-40 dark:bg-opacity-40 sticky top-0 z-20 shadow-md>
     <div container mx-auto relative flex justify-end items-center>
-      <NuxtLink to="/" flex gap-2 items-center absolute top-0 left-0>
+      <NuxtLink to="/" flex gap-3 items-center absolute top-0 left-0>
         <img src="/images/logos/vvifi-banner.png" alt="VviFi Banner Logo" w-15>
-        <span text-2xl font-black hidden md-block mb-4 class="rainbow-text">VviFi . FYI</span>
+        <span text-2xl font-black mb-4 class="rainbow-text">VviFi . FYI</span>
       </NuxtLink>
 
-      <nav flex gap-5 py-4 md:text-xl>
+      <SideNavDrawer :nav-links="menuNav" :social-links="socialLinks">
+        <div title="Menu" md:hidden text-xl>
+          <div i-carbon:menu />
+        </div>
+      </SideNavDrawer>
+      <nav flex gap-5 md:text-xl>
         <template v-for="n in menuNav" :key="n.href">
-          <NuxtLink :to="n.href" font-bold hover:underline>
+          <NuxtLink :to="n.href" font-bold hover:text-orange py-4 hidden md:block>
             {{ n.label }}
           </NuxtLink>
         </template>
-        <button title="Search">
-          🔍
-        </button>
+        <SearchModal>
+          <div p-4 md:px-0 title="Search">
+            🔍
+          </div>
+        </SearchModal>
       </nav>
     </div>
   </header>
@@ -52,5 +72,12 @@ const menuNav = [
 <style scoped>
 header {
    backdrop-filter: saturate(180%) blur(20px);
+}
+nav a.router-link-exact-active {
+  color: rgb(251, 146, 60);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(251, 146, 60);
+  /* @apply text-orange border-2 border-color-teal-500; */
 }
 </style>

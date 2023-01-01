@@ -24,7 +24,7 @@ useHead({
 
 <template>
   <div container mx-auto class="p-topics-topic">
-    <NuxtLink to="/topics" my-4 py-1 px-2 inline-flex border rounded items-center gap-2 hover:text-teal-500>
+    <NuxtLink to="/topics" my-4 py-1 px-2 inline-flex border rounded items-center gap-2 hover:text-orange>
       <div class="i-carbon:arrow-left" />
       Back to Topics
     </NuxtLink>

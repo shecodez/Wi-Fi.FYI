@@ -4,10 +4,14 @@
     mt-auto
     p-5
     flex
+    flex-col
+    md:flex-row
     justify-center
-    gap-3
+    items-center
+    gap-4
   >
     <NuxtLink i-carbon-campsite to="/" />
+    <JoinNewsletterForm />
     <DarkToggle />
   </div>
 </template>

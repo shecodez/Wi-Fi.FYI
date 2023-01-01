@@ -16,7 +16,7 @@ onMounted(() => {
 //   eyeLocation.value = eye?.value?.getBoundingClientRect()
 // }, { debounce: 200 })
 
-const moveBounds = 42
+const moveBounds = 20
 const friction = 1 / 30
 const moveX = ref(0)
 const moveY = ref(0)

@@ -4,9 +4,9 @@ defineProps(['post', 'showTextLeft', 'showMediaOnly'])
 
 const postTypeClasses = [
   { type: 'height-2x', classes: 'row-span-2' }, // post.type === 'gallery'
-  { type: 'text-only', classes: 'p-text-xl' }, // post.type === 'quote'
+  { type: 'text-only', classes: 'text-2xl' }, // post.type === 'quote'
 ]
-// post.showMediaOnly -> can be post.cover_image | post.embed_media | post.gallery
+// prop showMediaOnly -> can be post.cover_image | post.cover_video | post.cover_gallery
 </script>
 
 <template>
@@ -16,34 +16,34 @@ const postTypeClasses = [
     </div>
 
     <div v-if="post.cover_image" flex-1 overflow-hidden>
-      <img :src="`/${post.cover_image}`" :alt="post.title" object-cover w-full h-full>
       <!-- <Carousel v-if="post.type === 'gallery'" :slides="post.gallery" /> -->
+      <img :src="`/${post.cover_image}`" :alt="post.title" object-cover w-full h-full>
     </div>
 
     <div v-if="!showMediaOnly" relative p-4 flex-1 flex flex-col items-stretch class="text-container">
       <template v-if="post.cover_image">
-        <div v-if="showTextLeft" border-l-gray-200 dark:border-l-black class="arrow arrow-right" />
-        <div v-else border-r-gray-200 dark:border-r-black class="arrow arrow-left" />
+        <div v-if="showTextLeft" border-l-gray-200 dark:border-l-gray-900 class="arrow arrow-right" />
+        <div v-else border-r-gray-200 dark:border-r-gray-900 class="arrow arrow-left" />
       </template>
 
       <div flex items-center gap-1 text-sm>
         <div i-carbon:data-enrichment />
-        <NuxtLink :to="`/topics/${post._path.split('/')[2]}`" uppercase text-teal-500 hover:underline>
+        <NuxtLink :to="`/topics/${post._path.split('/')[2]}`" uppercase text-orange hover:underline>
           {{ post._path.split('/')[2].replace('-', ' ') }}
         </NuxtLink>
       </div>
 
-      <h3 text-2xl leading-5 pt-2 pb-3>
-        <NuxtLink :to="post._path" line-clamp-2 hover:text-teal-500 :title="post.title">
+      <h3 leading-5 pt-2 pb-1>
+        <NuxtLink :to="post._path" line-clamp-2 hover:text-orange xl:text-2xl :title="post.title">
           {{ post.title }}
         </NuxtLink>
       </h3>
 
-      <p tracking-wide font-thin line-clamp-3 text-xs lg:text-base text-gray>
+      <p line-clamp-2 lg:line-clamp-1 xl:line-clamp-3 font-thin text-xs text-gray xl:text-base>
         {{ post.description }}
       </p>
 
-      <NuxtLink :to="post._path" self-start mt-3 px-3 py-1 class="rainbow-bg">
+      <NuxtLink :to="post._path" self-start my-2 px-3 py-1 text-sm class="rainbow-bg">
         Read More
       </NuxtLink>
 
@@ -67,12 +67,12 @@ const postTypeClasses = [
 }
 .arrow-right {
   border-left: 20px solid transparent;
-  right: -1.25rem;
-  /* @apply  right--5; */
+  right: -1rem;
+  /* @apply  right--4; */
 }
 .arrow-left {
   border-right: 20px solid transparent;
-  left: -1.25rem;
-  /* @apply  -left-5; */
+  left: -1rem;
+  /* @apply  -left-4; */
 }
 </style>

@@ -35,7 +35,20 @@ html.dark body {
   /* @apply bg-gray-800 text-white; */
 }
 
+a:hover {
+  color: rgb(251, 146, 60);
+}
+
 blockquote {
-  border-left: 2px solid #dc9e45 !important;
+  border-left: 2px solid rgb(251, 146, 60) !important;
+}
+
+article a[href]:not(:where(
+  /* exclude hash only links */
+  [href^="#"],
+  /* exclude relative but not double slash only links */
+  [href^="/"]:not([href^="//"]),
+)) {
+  color: rgb(251, 146, 60);
 }
 </style>

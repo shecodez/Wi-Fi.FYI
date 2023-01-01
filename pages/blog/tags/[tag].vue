@@ -22,7 +22,7 @@ useHead({
 
 <template>
   <div container mx-auto class="p-tags-tag">
-    <NuxtLink to="/blog/tags" my-4 py-1 px-2 inline-flex border rounded items-center gap-2 hover:text-teal-500>
+    <NuxtLink to="/blog/tags" my-4 py-1 px-2 inline-flex border rounded items-center gap-2 hover:text-orange>
       <div class="i-carbon:arrow-left" />
       Back to Tags
     </NuxtLink>

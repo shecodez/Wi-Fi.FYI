@@ -53,7 +53,7 @@ function resetEyes() {
   </div>
 
   <h2 text-3xl font-black uppercase>
-    🚧 Site under construction 🚧
+    🚧 <span class="rainbow-text">Site under construction</span> 🚧
   </h2>
   <div>~❤️ VviFi</div>
   <div flex gap-2 justify-center items-center text="xl gray4">
@@ -67,11 +67,11 @@ function resetEyes() {
       <div ic:round-tiktok><span sr-only>Tik Tok</span></div>
     </a> · -->
     <a href="https://www.twitch.tv/vvifi_fyi">
-      <div i-mdi:twitch>Twitch<span sr-only>Twitch</span></div>
+      <div text-2xl><IconsMdiTwitchSvg /> <span sr-only>Twitch</span></div>
     </a> ·
     <a href="https://twitter.com/vvifi_fyi">
       <div i-carbon:logo-twitter><span sr-only>Twitter</span></div>
-    </a>(RIP) ·
+    </a><span ml--2>(RIP) ·</span>
     <a href="https://youtube.com/@vvifi_fyi">
       <div i-carbon:logo-youtube><span sr-only>YouTube</span></div>
     </a> ·
@@ -125,7 +125,7 @@ a:hover {
     height: 50%;
   }
   .banner {
-    height: 15%;
+    height: 10%;
   }
 }
 </style>
