@@ -60,29 +60,5 @@ useHead({
         </div>
       </template>
     </section>
-
-    <form method="post" action="/.netlify/functions/postcomment?branch=master">
-      <p>
-        <label for="name">Name</label>
-        <br>
-        <input id="name" bg-transparent type="text" name="fields[name]" placeholder="John Doe">
-      </p>
-
-      <p>
-        <label for="message">Comment</label>
-        <br>
-        <textarea id="message" bg-transparent name="fields[message]" placeholder="Here's the thing..." />
-      </p>
-
-      <input type="hidden" name="fields[post]" value="test-post">
-      <!-- <input type="hidden" name="options[redirect]" value="/thankyou">
-      <input type="hidden" name="options[redirectError]" value="/error"> -->
-
-      <p>
-        <button type="submit">
-          Submit
-        </button>
-      </p>
-    </form>
   </div>
 </template>
