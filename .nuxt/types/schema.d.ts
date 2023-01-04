@@ -135,6 +135,8 @@ declare module '@nuxt/schema' {
 
     siteUrl: string,
 
+    reCaptchaSiteKey: string,
+
     content: {
         clientDB: {
              isSPA: boolean,

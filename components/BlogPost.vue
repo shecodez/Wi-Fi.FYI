@@ -1,4 +1,5 @@
 <script setup>
+import BlogCommentSection from './blog/BlogCommentSection.vue'
 import { formatDate } from '~~/utils'
 
 defineProps(['data'])
@@ -58,6 +59,8 @@ defineProps(['data'])
             </ContentRenderer>
           </client-only>
         </article>
+
+        <BlogCommentSection :slug="data.post._path" />
       </div>
 
       <aside col-span-full md:col-span-2 mt-6 class="right-aside">

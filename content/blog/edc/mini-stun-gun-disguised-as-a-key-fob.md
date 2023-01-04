@@ -32,7 +32,7 @@ Pro: Stun guns work in all weather, including the wind and rain (unlike pepper s
 
 <img src="https://res.cloudinary.com/shecodez/image/upload/v1670596159/vvifi_fyi%20blog/2.png" alt="element of suprise" />
 
-🔌 Shameless plug: [The Element of Suprise avaliable here](https://niico-wts.creator-spring.com/listing/buy-the-element-of-surprise) 
+🔌 Shameless plug: [The Element of Suprise merch avaliable here](https://niico-wts.creator-spring.com/listing/buy-the-element-of-surprise) 
 
 
 ### FYI #2

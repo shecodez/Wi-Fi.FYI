@@ -14,14 +14,15 @@ import tokyoImg from '@/assets/images/tokyo.png'
         <h3><em>Tentative</em> Schedule:</h3>
         <ul>
           <li>
-            <NuxtLink to="/topics/nerdy">
-              MAN (Mostly Anime News)
+            <NuxtLink to="/topics/money">
+              Money Money
             </NuxtLink> - <b>Mondays</b>
           </li>
           <li>
-            <NuxtLink to="/topics/edc">
-              Her EDC
+            <NuxtLink to="/topics/travel">
+              Travel
             </NuxtLink> - <b>Tuesdays</b>
+            <i text-xs>FYI - Tuesday is the cheapest day to fly ✈️</i>
           </li>
           <li>
             <NuxtLink to="/topics/wtf">
@@ -29,13 +30,13 @@ import tokyoImg from '@/assets/images/tokyo.png'
             </NuxtLink> - <b>Wednesday</b>
           </li>
           <li>
-            <NuxtLink to="/topics/travel">
-              Travel
+            <NuxtLink to="/topics/edc">
+              Technically <i>'Her'</i> EDC
             </NuxtLink> - <b>Thursdays</b>
           </li>
           <li>
-            <NuxtLink to="/blog/tags/foodie">
-              Foodie
+            <NuxtLink to="/blog/tags/fat">
+              FAT (Food Adventure Time)
             </NuxtLink> - <b>Fridays</b>
           </li>
           <li>
@@ -46,7 +47,7 @@ import tokyoImg from '@/assets/images/tokyo.png'
         </ul>
         <p text-sm>
           <b>Note</b> : Although updates will NOT be daily while I have a full-time job ¯\_(ツ)_/¯, when I <u>do</u> update, I'll try to follow the schedule.
-          <em>i.e.</em> a Thursday update will likely be about travel ✈️, and a Saturday / Sunday update is a special wildcard 🔮.
+          <em>i.e.</em> a Tuesday update will likely be about travel ✈️, and a Saturday / Sunday update is a special wildcard 🔮.
         </p>
       </article>
     </div>

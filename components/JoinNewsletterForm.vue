@@ -55,7 +55,7 @@ async function joinNewsletter() {
       </div>
       <div mt-2 dark:text-gray-400 text-xs>
         By clicking
-        <div i-carbon:arrow-right inline-block /> you agree to our
+        <div i-carbon:arrow-right inline-block /> you agree to the
         <NuxtLink to="/legal/privacy" text-orange hover:underline>
           Privacy Policy
         </NuxtLink>

@@ -131,9 +131,10 @@ My self-defense weapon choice is a [mini stun gun that looks like a car key fob]
 I have a different little pouch I start carrying when it's close to that time of the month. I only keep a panty liner and a reusable [Flex Menstrual Disc](https://amzn.to/3Q6RygZ). I used to carry a pad, but, to be more eco-friendly, I switched to disposable plant-based discs. ♻️
 
 ### Misc
-> “everything but the kitchen sink.” 
 
-<img src="https://res.cloudinary.com/shecodez/image/upload/v1672604565/vvifi_fyi%20blog/IMG_1669.jpg" alt="misc items" />
+<img src="https://res.cloudinary.com/shecodez/image/upload/v1672683659/vvifi_fyi%20blog/1.png" alt="misc items" />
+
+> “everything but the kitchen sink.” 
 
 Here are my current favorite miscellaneous budget EDC items. *Except for the Quip refillable floss pick, each item was 10 dollars or less, so if you see it for more than ten dollars, wait for it to go on sale because you know I didn’t pay that much for it 💅🏽:
 1. [NIVEA Smoothness Lip Care - Broad Spectrum SPF 15](https://amzn.to/3G7qmtV) (lip balm with SPF)

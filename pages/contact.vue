@@ -6,19 +6,6 @@ const { data: contactFormJson } = await useAsyncData('contactFormJson', () => {
   return queryContent('forms', 'contact').findOne()
 })
 
-// TODO: optimize: this seems like a lot just to update the hint text on input...
-const contactForm = ref({ message: '' })
-const contactFormMessageLength = computed(() => contactForm.value.message.length || 0)
-watch(contactFormMessageLength, (messageLength) => {
-  getNode('contactmessage').props.help = `${messageLength} / 500`
-})
-// https://formkit.com/advanced/custom-inputs#displaying-values
-function handleMessageInput() {
-  // console.log('handleMessageInput called')
-  // const node = getNode('contactmessage')
-  // node.props.help = `${node.context.value.langth} / 500`
-}
-
 const state = reactive({
   loading: false,
   sent: false,
@@ -28,6 +15,20 @@ const state = reactive({
 
   handleMessageInput,
 })
+
+// TODO: optimize: this seems like a lot just to update the hint text on input...
+const contactForm = ref({ message: '' })
+const contactFormMessageLength = computed(() => contactForm.value?.message.length || 0)
+watch(contactFormMessageLength, (messageLength) => {
+  if (!state.sent)
+    getNode('contactmessage').props.help = `${messageLength} / 500`
+})
+// https://formkit.com/advanced/custom-inputs#displaying-values
+function handleMessageInput() {
+  // console.log('handleMessageInput called')
+  // const node = getNode('contactmessage')
+  // node.props.help = `${node.context.value.length} / 500`
+}
 
 // If all inputs are valid it fires the @submit event
 async function postContactForm(formData, node) {
