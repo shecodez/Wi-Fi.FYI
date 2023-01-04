@@ -43,13 +43,13 @@ defineProps(['data'])
     <hr class="border-primary">
 
     <section grid grid-cols-8 gap-4 pt-4 class="post">
-      <aside v-if="!!data.post.body.toc.links.length" col-span-full md:col-span-2 mt-6 class="left-aside">
+      <aside v-if="!!data.post.body.toc.links.length" col-span-full lg:col-span-2 mt-6 class="left-aside">
         <div sticky top-20>
           <TableOfContents :links="data.post.body.toc.links" />
         </div>
       </aside>
 
-      <div col-span-full col-span-4>
+      <div col-span-full lg:col-span-4>
         <article mx-auto first-letter:text-3xl first-letter:text-orange prose dark:prose-invert class="article">
           <client-only>
             <ContentRenderer :value="data.post">
@@ -63,7 +63,7 @@ defineProps(['data'])
         <BlogCommentSection :slug="data.post._path" />
       </div>
 
-      <aside col-span-full md:col-span-2 mt-6 class="right-aside">
+      <aside col-span-full lg:col-span-2 mt-6 class="right-aside">
         <div sticky top-20>
           <AnimatedAvatar />
           <h4 text-center text-xl font-black>

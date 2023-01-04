@@ -69,7 +69,7 @@ Can you believe the [Gerber Gear 12-in-1 Dime -  Black](https://www.gerbergear.c
 
 ### Watch
 
-<div class="flex gap-2">
+<div class="flex gap-2 overflow-auto">
   <img src="https://res.cloudinary.com/shecodez/image/upload/v1671116760/vvifi_fyi%20blog/pokemon_battle_clockology.png" >
   <img src="https://res.cloudinary.com/shecodez/image/upload/v1671116749/vvifi_fyi%20blog/casio_nasa_clockology.png" alt="casio x nasa clockology" >
 </div>
@@ -95,7 +95,7 @@ I don’t have a dedicated flashlight in my budget EDC. 😲 But wait, hear me o
 
 <br />
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gqlNY5iX-nA?start=86" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/gqlNY5iX-nA?start=86" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Mask
 Since the start of the ‘Rona, my Bare _minimum_ EDC was: phone, keys, wallet… [mask](https://amzn.to/3Gx9nCG). Now with restrictions (or strong suggestions if you live in the US) lifted, I still always carry one, even if I’m not required to wear it anymore.
@@ -122,7 +122,7 @@ Until now, the EDC has been unisex, but now it’s time to make it **Her EDC**.
 > 🎵“Come Here Lil Mama Lemme Whisper In Your Ear…” 🎵
 ― Ying Yang Twins, Ying Yang Twins - Wait (The Whisper Song) (Official Music Video)
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HAnXIIv5He8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/HAnXIIv5He8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Self-defense tool/weapon
 My self-defense weapon choice is a [mini stun gun that looks like a car key fob](https://amzn.to/3WKyuba). I wrote an article on it [here](https://vvifi.fyi/blog/edc/mini-stun-gun/diguised-as-a-key-fob).

@@ -2,6 +2,9 @@
 // define links prop
 defineProps(['links'])
 
+const showOutline = ref(true)
+// TODO: if on mobile showOutline = false
+
 // flatten TOC links nested arrays to one array
 const flattenLinks = (links) => {
   const _links = links
@@ -21,13 +24,18 @@ const flattenLinks = (links) => {
 </script>
 
 <template>
-  <nav my-1 p-4 border rounded overflow-auto class="toc max-h-[calc(100vh-10rem)]">
-    <header pt-2 mb-2 border-b-2>
+  <nav max-w-prose mx-auto my-1 p-4 border rounded overflow-auto class="toc max-h-[calc(100vh-10rem)]">
+    <header pt-2 mb-2 border-b-2 flex items-center justify-between>
       <h3 text-xl font-bold>
         Outline
       </h3>
+      <button hover:text-orange @click="showOutline = !showOutline">
+        <div v-if="showOutline" i-carbon:caret-up />
+        <div v-else i-carbon:caret-down />
+        <span sr-only>Expand/Collapse Outline</span>
+      </button>
     </header>
-    <ul flex flex-col gap-2 px-2>
+    <ul v-if="showOutline" flex flex-col gap-2 px-2>
       <!-- render each link with depth class -->
       <template v-for="link of flattenLinks(links)" :key="link.id">
         <li text-gray-500 :class="`toc-link _${link.depth}`">

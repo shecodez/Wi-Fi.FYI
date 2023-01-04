@@ -7,7 +7,7 @@ const { data: comments } = await useAsyncData('commentsJson', () => {
 </script>
 
 <template>
-  <section w-prose mt-10 pt-10 mx-auto flex flex-col gap-4 border-t-2 border-orange>
+  <section max-w-prose mt-10 pt-10 mx-auto flex flex-col gap-4 border-t-2 border-orange>
     <BlogCommentForm :slug="slug" />
     <BlogCommentList :comments="comments" />
   </section>
