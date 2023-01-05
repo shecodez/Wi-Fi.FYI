@@ -3,7 +3,7 @@ date: 2022-12-15T21:12:31.593Z
 title: "Upgrade your iPhone 11 to an iPhone 12 for less than 12 bucks"
 cover_image: uploads/blog/wtf/upgrade-your-iphone-11-to-support-magsafe-with-a-sticker-cover.jpg
 edited: false
-published: false
+published: true
 tags:
   - wtf
   - tech
@@ -20,7 +20,7 @@ So I bought the Apple MagSafe wallet to go with my iPhone 11. The new wallet has
 
 With the DIY MagSafe ‘upgrade', Although I decided to switch to [another case](https://amzn.to/3Gv1HRs), I wanted to pay homage to the [UAG (Urban Armor Gear) case](https://amzn.to/3Q4Dxk5) I've had on it since Nov 2018. It has protected my phone from all the bumps, scrapes, and drops until now (Dec 2022) and is still going strong. Now my phone is so old I don't _feel_ it needs such a heavy-duty case anymore, so I went with a lighter one.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XV6fVmDMW2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/XV6fVmDMW2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 > I don't feel it needs such a heavy-duty case anymore, so I went with a lighter one.
 

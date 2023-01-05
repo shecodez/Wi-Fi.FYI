@@ -38,7 +38,7 @@ async function joinNewsletter() {
     </div>
 
     <div class="form-control">
-      <label for="email" pb-2 text-xs font-bold>Join for <span uppercase>Free</span> <NuxtLink to="/about" text-orange hover:underline>VviFi</NuxtLink> 😉</label>
+      <label for="email" pb-2 text-xs font-bold>Join the <span uppercase>Free</span> <NuxtLink to="/about" text-orange hover:underline>VviFi</NuxtLink> 😉</label>
       <div relative flex items-center>
         <input
           v-model="state.email"
@@ -62,7 +62,7 @@ async function joinNewsletter() {
         |
         <NuxtLink to="/legal/terms" text-orange hover:underline>
           Terms of Use
-        </NuxtLink>. Pinky promise, no green eggs and spam. 😉
+        </NuxtLink>. Pinky promise, no green eggs nor spam. 🙅🏾‍♀️
       </div>
     </div>
   </form>

@@ -1,6 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import { FormKitSchema } from '@formkit/vue'
 import { getNode } from '@formkit/core'
+import type { FormKitNode } from '@formkit/core'
+
+const config = useRuntimeConfig()
 
 const { data: contactFormJson } = await useAsyncData('contactFormJson', () => {
   return queryContent('forms', 'contact').findOne()
@@ -9,11 +12,12 @@ const { data: contactFormJson } = await useAsyncData('contactFormJson', () => {
 const state = reactive({
   loading: false,
   sent: false,
-  error: null,
+  error: '',
   bot: null,
   isBot: false,
+  reCaptchaToken: '',
 
-  handleMessageInput,
+  // handleMessageInput,
 })
 
 // TODO: optimize: this seems like a lot just to update the hint text on input...
@@ -30,8 +34,14 @@ function handleMessageInput() {
   // node.props.help = `${node.context.value.length} / 500`
 }
 
+const reCAPTCHA = ref()
+const reCaptchaAction = 'submit_contact_email'
+onMounted(() => {
+  reCAPTCHA.value = useVueRecaptcha(config.public.reCaptchaSiteKey)
+})
+
 // If all inputs are valid it fires the @submit event
-async function postContactForm(formData, node) {
+async function postContactForm(formData: any, node: FormKitNode) {
   state.loading = true
 
   try {
@@ -39,10 +49,13 @@ async function postContactForm(formData, node) {
       state.isBot = true
     }
     else {
+      // Wait for the reCAPTCHA token
+      state.reCaptchaToken = await reCAPTCHA.value(reCaptchaAction)
+
     // await sendContactEmail(formData)
     }
   }
-  catch (error) {
+  catch (error: any) {
     node.setErrors(error)
     state.error = 'Error sending message, please try again later.'
   }
@@ -52,7 +65,6 @@ async function postContactForm(formData, node) {
   }
 }
 
-const config = useRuntimeConfig()
 useHead({
   title: `Contact | ${config.public.appName}`,
 })
@@ -81,7 +93,7 @@ useHead({
 
       <p>
         Have a question 🤔? Want to give feedback? Report a bug 🐞? et cetera. Please fill out this contact form
-        or you can
+        or you can always
         <a href="mailto:contact@vvifi.fyi" text-orange hover:underline>contact@vvifi.fyi</a> via
         email. 🥰
       </p>
@@ -95,7 +107,7 @@ useHead({
       </div>
 
       <FormKit v-else id="contactform" v-model="contactForm" type="form" :actions="false" form-class="mt-6" @submit="postContactForm">
-        <FormKitSchema :schema="contactFormJson.body" :data="state" />
+        <FormKitSchema :schema="contactFormJson?.body" :data="state" />
       </FormKit>
     </div>
   </div>

@@ -5,7 +5,7 @@
     <div class="fixed h-2 left-0 top-0 w-full rainbow-bg z-50" />
     <div class="fixed h-2 left-0 bottom-0 w-full rainbow-bg z-50" /> -->
     <Header />
-    <main ref="main" px-4>
+    <main ref="main">
       <slot />
     </main>
     <Footer />

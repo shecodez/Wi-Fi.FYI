@@ -35,6 +35,11 @@
   },
   {
     "$formkit": "hidden",
+    "name": "bot",
+    "placeholder": "This field is only for bots."
+  },
+  {
+    "$formkit": "hidden",
     "name": "post"
   },
   {
