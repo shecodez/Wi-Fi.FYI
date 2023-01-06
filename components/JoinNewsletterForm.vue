@@ -1,43 +1,67 @@
-<script setup>
-// import useSupabase from '@/use/supabase';
+<script setup lang="ts">
+// const config = useRuntimeConfig()
 
 const state = reactive({
   loading: false,
   email: '',
   sent: false,
-  error: '',
+  successMessage: '',
+  errorMessage: '',
 })
-// const { supabase } = useSupabase();
+
+// const mailchimpListId = ref(config.public.mailchimpListId)
+
 async function joinNewsletter() {
-  // console.log('join Newsletter', state.email)
-  //   try {
-  //     state.loading = true;
-  //     let { data, error, status } = await supabase.from('subscribers').upsert({
-  //       email: state.email,
-  //     });
-  //     if (error && status !== 406) throw error;
-  //     if (data) {
-  //       state.sent = true;
-  //       console.log('subscribed to newsletter', data);
-  //     }
-  //   } catch (e: any) {
-  //     state.error = e.error_description || e.message;
-  //   } finally {
-  //     state.loading = false;
-  //   }
+  state.loading = true
+  state.errorMessage = ''
+  state.successMessage = ''
+
+  try {
+    // console.log('join newsletter', state.email)
+
+    // Submit the form to Netlify Function
+    const response = await fetch('/.netlify/functions/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email: state.email }),
+    })
+
+    const responseJson = await response.json()
+    // Throw an error if the response was not successful
+    if (responseJson.status === 'error')
+      throw new Error(responseJson.errorMessage)
+
+    if (responseJson.status === 'pending')
+      state.successMessage = 'You have been subscribed. Please check your email to confirm.'
+
+    else if (responseJson.status === 'subscribed')
+      state.successMessage = 'You are already subscribed. Thank you for being a subscriber!'
+
+    else
+      state.errorMessage = 'We could not subscribe you. Please try again.'
+  }
+  catch (e: any) {
+    state.errorMessage = e.error_description || e.message
+  }
+  finally {
+    state.loading = false
+    state.sent = true
+    state.email = ''
+  }
 }
 </script>
 
 <template>
-  <form @submit.prevent="joinNewsletter">
-    <div v-if="state.error" p-2 flex items-center my-1 class="error-alert">
-      🛑 {{ state.error }}
+  <form max-w-md @submit.prevent="joinNewsletter">
+    <div v-if="state.errorMessage" p-2 flex items-center my-1 class="error-alert">
+      ❌ {{ state.errorMessage }}
     </div>
-    <div v-if="state.sent" p-2 flex items-center my-1 class="success-alert">
-      ✔️ We added you. Thanks!
+    <div v-if="state.sent && !state.errorMessage" p-2 flex items-center my-1 class="success-alert">
+      ✔️ {{ state.successMessage }}
     </div>
-
-    <div class="form-control">
+    <div v-else class="form-control">
       <label for="email" pb-2 text-xs font-bold>Join the <span uppercase>Free</span> <NuxtLink to="/about" text-orange hover:underline>VviFi</NuxtLink> 😉</label>
       <div relative flex items-center>
         <input
@@ -48,6 +72,7 @@ async function joinNewsletter() {
           placeholder="your@email.com"
           w-full p-2 bg-gray-200 dark:bg-gray-900 pr-10
         >
+        <!-- <input type="hidden" name="listId" :value="mailchimpListId"> -->
         <button absolute right-0 p-3 hover:text-orange :class="state.loading && 'loading'">
           <div i-carbon:arrow-right />
           <span class="sr-only">Join</span>
@@ -62,7 +87,7 @@ async function joinNewsletter() {
         |
         <NuxtLink to="/legal/terms" text-orange hover:underline>
           Terms of Use
-        </NuxtLink>. Pinky promise, no green eggs nor spam. 🙅🏾‍♀️
+        </NuxtLink>. Pinky promise, no green eggs nor spam.
       </div>
     </div>
   </form>

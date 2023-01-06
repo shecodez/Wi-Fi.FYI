@@ -69,9 +69,9 @@ async function postCommentForm(formData: any, node: FormKitNode) {
     // reCAPTCHA.value.reset()
     }
   }
-  catch (error: any) {
-    node.setErrors(error)
-    state.error = 'Error sending message, please try again later.'
+  catch (e: any) {
+    node.setErrors(e)
+    state.error = 'Error, please try again later.' // e.error_description || e.message
   }
   finally {
     state.loading = false

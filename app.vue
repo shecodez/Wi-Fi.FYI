@@ -8,6 +8,19 @@ useHead({
       rel: 'icon', type: 'image/png', href: '/favicon.ico',
     },
   ],
+  script: [
+    {
+      id: 'mcjs',
+      children:
+      `
+      !function(c,h,i,m,p) {
+        m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
+      }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2b43b48a6ae5a95c8f3c65c29/5673e49cb23e1ba7a1d7321b1.js");
+      `,
+      type: 'text/javascript',
+    },
+
+  ],
 })
 </script>
 

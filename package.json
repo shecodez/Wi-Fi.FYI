@@ -25,7 +25,9 @@
   },
   "dependencies": {
     "@formkit/nuxt": "1.0.0-beta.12",
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@staticman/netlify-functions": "^1.7.1",
+    "crypto": "^1.0.1",
     "vue-recaptcha-v3": "^2.0.1"
   }
 }

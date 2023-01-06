@@ -34,6 +34,7 @@ export default defineNuxtConfig({
       appDescription: 'VviFi.FYI - Lil Travel & Tech * Lil EDC * Lot of Nerdy 💩',
       siteUrl: 'https://vvifi.fyi',
       reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
+      // mailchimpListId: process.env.MAILCHIMP_LIST_ID,
     },
   },
 })

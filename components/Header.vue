@@ -20,7 +20,7 @@ const megaMenuNav = [
 
 const menuNav = [
   { label: 'About', href: '/about' },
-  { label: 'VviFi 🔥Hotspot', href: '/vvifi-hotspot' },
+  { label: 'VviFi 🔥Hotspot', href: '/hotspot' },
   { label: 'Blog', href: '/blog', subMenuNav: megaMenuNav },
   { label: 'Topics', href: blogTopicRoute },
   { label: 'Tags', href: blogTagRoute },
