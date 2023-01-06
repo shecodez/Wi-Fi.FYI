@@ -76,7 +76,7 @@
     "$formkit": "submit",
     "prefixIcon": "submit",
     "classes": {
-      "input": "send-btn rainbow-bg px-8 py-2 mt-4 uppercase flex items-center gap-1"
+      "input": "send-btn rainbow-bg px-8 py-2 mt-4 uppercase flex items-center gap-1 ml-auto"
     },
     "children": {
       "if": "$loading",

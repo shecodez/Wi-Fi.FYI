@@ -14,6 +14,7 @@ specifiers:
   '@vueuse/nuxt': ^9.4.0
   crypto: ^1.0.1
   eslint: ^8.26.0
+  mailgun-js: ^0.22.0
   nuxt: ^3.0.0-rc.12
   pinia: ^2.0.23
   typescript: ^4.8.4
@@ -24,6 +25,7 @@ dependencies:
   '@mailchimp/mailchimp_marketing': 3.0.80
   '@staticman/netlify-functions': 1.7.1
   crypto: 1.0.1
+  mailgun-js: 0.22.0
   vue-recaptcha-v3: 2.0.1
 
 devDependencies:

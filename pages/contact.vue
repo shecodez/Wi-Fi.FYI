@@ -1,69 +1,5 @@
 <script setup lang="ts">
-import { FormKitSchema } from '@formkit/vue'
-import { getNode } from '@formkit/core'
-import type { FormKitNode } from '@formkit/core'
-
 const config = useRuntimeConfig()
-
-const { data: contactFormJson } = await useAsyncData('contactFormJson', () => {
-  return queryContent('forms', 'contact').findOne()
-})
-
-const state = reactive({
-  loading: false,
-  sent: false,
-  error: '',
-  bot: null,
-  isBot: false,
-  reCaptchaToken: '',
-
-  // handleMessageInput,
-})
-
-// TODO: optimize: this seems like a lot just to update the hint text on input...
-const contactForm = ref({ message: '' })
-const contactFormMessageLength = computed(() => contactForm.value?.message.length || 0)
-watch(contactFormMessageLength, (messageLength) => {
-  if (!state.sent)
-    getNode('contactmessage').props.help = `${messageLength} / 500`
-})
-// https://formkit.com/advanced/custom-inputs#displaying-values
-function handleMessageInput() {
-  // console.log('handleMessageInput called')
-  // const node = getNode('contactmessage')
-  // node.props.help = `${node.context.value.length} / 500`
-}
-
-const reCAPTCHA = ref()
-const reCaptchaAction = 'submit_contact_email'
-onMounted(() => {
-  reCAPTCHA.value = useVueRecaptcha(config.public.reCaptchaSiteKey)
-})
-
-// If all inputs are valid it fires the @submit event
-async function postContactForm(formData: any, node: FormKitNode) {
-  state.loading = true
-
-  try {
-    if (formData.bot) {
-      state.isBot = true
-    }
-    else {
-      // Wait for the reCAPTCHA token
-      state.reCaptchaToken = await reCAPTCHA.value(reCaptchaAction)
-
-    // await sendContactEmail(formData)
-    }
-  }
-  catch (error: any) {
-    node.setErrors(error)
-    state.error = 'Error sending message, please try again later.'
-  }
-  finally {
-    state.loading = false
-    state.sent = true
-  }
-}
 
 useHead({
   title: `Contact | ${config.public.appName}`,
@@ -87,28 +23,7 @@ useHead({
     </div>
 
     <div relative z-10 p-4 md:p-8 bg-white dark:bg-gray-800 shadow-md class="md:w-2/3 lg:w-1/2 xl:w-1/3 md:mr-20 lg:mr-40">
-      <h2 text-3xl lg:text-5xl font-bold mb-6 class="rainbow-text">
-        Get in Touch
-      </h2>
-
-      <p>
-        Have a question 🤔? Want to give feedback? Report a bug 🐞? et cetera. Please fill out this contact form
-        or you can always
-        <a href="mailto:contact@vvifi.fyi" text-orange hover:underline>contact@vvifi.fyi</a> via
-        email. 🥰
-      </p>
-
-      <div v-if="state.isBot" class="alert bot-alert">
-        🍯 Oh honey pot! We think not, you're a bot!
-      </div>
-      <div v-if="state.sent" class="alert" :class="state.error ? 'error-alert' : 'success-alert'">
-        <span v-if="state.error">❗ {{ state.error }}</span>
-        <span v-else>✔️ Message sent. Thanks!</span>
-      </div>
-
-      <FormKit v-else id="contactform" v-model="contactForm" type="form" :actions="false" form-class="mt-6" @submit="postContactForm">
-        <FormKitSchema :schema="contactFormJson?.body" :data="state" />
-      </FormKit>
+      <ContactForm />
     </div>
   </div>
 </template>
@@ -134,6 +49,9 @@ div.p-contact {
 .text-red {
   --un-text-opacity: 1;
   color: rgba(248, 113, 113, var(--un-text-opacity));
+}
+.ml-auto {
+  margin-left: auto;
 }
 @media (min-width: 768px) {
   .md\:flex-row {
