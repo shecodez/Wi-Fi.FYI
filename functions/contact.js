@@ -1,9 +1,9 @@
 const mailgun = require('mailgun-js')
 
-const { MAILGUN_API_KEY, MAILGUN_DOMAIN, NO_REPLY_EMAIL_ADDRESS, CONTACT_EMAIL_ADDRESS } = process.env
+const { MAILGUN_API_KEY, MAILGUN_DOMAIN, CONTACT_EMAIL_ADDRESS } = process.env
 
 // TODO: Upgrade mailgun. Sandbox subdomains are for test purposes only and not allowed to send mail.
-const sendThankYouEmail = async (email) => {
+/* const sendThankYouEmail = async (email) => {
   return new Promise((resolve, reject) => {
     // console.log('Sending the email')
 
@@ -26,7 +26,7 @@ const sendThankYouEmail = async (email) => {
       resolve()
     })
   })
-}
+} */
 
 const sendContactFormEmail = async (formData) => {
   return new Promise((resolve, reject) => {

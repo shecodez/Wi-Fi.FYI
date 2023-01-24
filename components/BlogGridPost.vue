@@ -19,6 +19,12 @@ const postTypeClasses = [
       <!-- <Carousel v-if="post.type === 'gallery'" :slides="post.gallery" /> -->
       <img :src="`/${post.cover_image}`" :alt="post.title" object-cover w-full h-full>
     </div>
+    <div v-else-if="post.iframe_url" relative flex-1 overflow-hidden>
+      <Iframe :src="post.iframe_url" width="100%" height="100%" title="YouTube video player" />
+      <NuxtLink :to="post._path" absolute top-0 right-0 px-1 py-1 text-sm class="rainbow-bg">
+        <div i-carbon:caret-right />
+      </NuxtLink>
+    </div>
 
     <div v-if="!showMediaOnly" relative p-4 flex-1 flex flex-col items-stretch class="text-container">
       <template v-if="post.cover_image">
@@ -43,8 +49,11 @@ const postTypeClasses = [
         {{ post.description }}
       </p>
 
-      <NuxtLink :to="post._path" self-start my-2 px-3 py-1 text-sm class="rainbow-bg">
-        Read More
+      <NuxtLink :to="post._path" self-start my-2 px-2 py-1 class="rainbow-bg">
+        <div flex gap-1 items-center text-sm>
+          Read More
+          <div i-carbon:caret-right />
+        </div>
       </NuxtLink>
 
       <div v-if="post.date" text-xs mt-auto flex items-center gap-1>
