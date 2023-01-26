@@ -43,6 +43,6 @@ collections:
           widget: 'list',
           field: { label: Name, name: name, widget: string, default: 'tag' }
         }
-      - { label: 'Cover Image', name: 'cover_image', widget: 'image', required: false }
-      - { label: 'Cover Image Source', name: 'cover_image_source', widget: 'string', required: false }
+      - { label: 'Cover Image', name: 'cover_image_src', widget: 'image', required: false }
+      - { label: 'Cover Image Source', name: 'cover_image_src_source', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }

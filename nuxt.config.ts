@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     // Config within public will be also exposed to the client
     public: {
       appName: 'VviFi . FYI',
-      appDescription: 'VviFi.FYI - Lil Travel & Tech * Lil EDC * Lot of Nerdy 💩',
+      appDescription: 'VviFi.FYI - VviFi’s –hotspot for Tech, Travel, and Food –FYI',
       siteUrl: 'https://vvifi.fyi',
       reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
       // mailchimpListId: process.env.MAILCHIMP_LIST_ID,

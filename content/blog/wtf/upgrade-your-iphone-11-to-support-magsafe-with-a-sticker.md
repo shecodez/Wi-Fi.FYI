@@ -1,7 +1,7 @@
 ---
 date: 2022-12-15T21:12:31.593Z
 title: "Upgrade your iPhone 11 to an iPhone 12 for less than 12 bucks"
-cover_image: uploads/blog/wtf/upgrade-your-iphone-11-to-support-magsafe-with-a-sticker-cover.jpg
+cover_image_src: uploads/blog/wtf/upgrade-your-iphone-11-to-support-magsafe-with-a-sticker-cover.jpg
 edited: false
 published: true
 tags:

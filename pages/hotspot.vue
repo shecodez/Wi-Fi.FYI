@@ -7,7 +7,7 @@ const wtfFavorites = [
   { name: 'Apple iPhone 11', href: `${blogRoute}/wtf/upgrade-your-iphone-11-to-support-magsafe-with-a-sticker` },
   { name: 'Apple Watch series 4', href: 'https://amzn.to/3WFIimv' },
   { name: 'MagSafe Wallet with Find my', href: `${blogRoute}/edc/her-edc-beginners-budget-edition#a-magsafe-wallet-that-supports-apples-find-my-service` },
-  { name: 'BUDI 9 in 1 USB C Data cable and Mrcro SD Card Reader', href: 'https://amzn.to/3G9oZev' },
+  { name: 'BUDI 9-in-1 MicroSD Card Reader', href: `${blogRoute}/wtf/budi-9-in-1-anyone` },
   { name: '3 in 1 Apple charging dock', href: 'https://amzn.to/3WKL3TS' },
 ]
 

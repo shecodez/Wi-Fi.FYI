@@ -21,7 +21,7 @@ useHead({
     {
       hid: 'og:image',
       property: 'og:image',
-      content: `${config.public.siteUrl}/${data.value.post.cover_image}`,
+      content: `${config.public.siteUrl}/${data.value.post.cover_image_src}`,
     },
   ],
 })

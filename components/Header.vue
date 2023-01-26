@@ -10,11 +10,11 @@ const edcMenu = [
 
 const blogTopicRoute = '/topics'
 const megaMenuNav = [
-  { label: 'Tech', href: `${blogTopicRoute}/tech`, subMenuNav: [] },
+  { label: 'FAT', href: `${blogTopicRoute}/fat`, subMenuNav: [] },
   { label: 'Her EDC', href: `${blogTopicRoute}/edc`, subMenuNav: edcMenu },
   { label: 'WTF', href: `${blogTopicRoute}/wtf`, title: 'Wonderful Treasure Finds', subMenuNav: [] },
   { label: 'Travel', href: `${blogTopicRoute}/travel`, subMenuNav: [] },
-  { label: 'Nerdy 💩', href: `${blogTopicRoute}/nerdy`, subMenuNav: [] },
+  { label: 'Nerdy 💩', href: `${blogTopicRoute}/nerd`, subMenuNav: [] },
   // { label: 'More', subMenuNav: [] },
 ]
 

@@ -1,7 +1,7 @@
 ---
 date: 2023-01-25T21:12:31.593Z
 title: Budi 9-in-1 anyone?
-cover_image: uploads/blog/wtf/budi-9-in-1-anyone-cover.jpg
+cover_image_src: uploads/blog/wtf/budi-9-in-1-anyone-cover.jpg
 edited: false
 published: true
 tags:

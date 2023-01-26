@@ -5,7 +5,7 @@ const {
 
 const filter = tag.split(',')
 const blogQuery = queryContent('blog')
-  .only(['_path', 'title', 'description', 'date', 'cover_image'])
+  .only(['_path', 'title', 'description', 'date', 'cover_image_src'])
   .where({ tags: { $contains: filter } })
   // .sort({ date: -1 })
   .find() // ; <ContentList :query="blogQuery">

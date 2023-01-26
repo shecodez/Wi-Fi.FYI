@@ -1,7 +1,7 @@
 ---
 date: 2022-07-19T21:12:31.593Z
 title: "Ultimate Carry on Packing List"
-cover_image: uploads/blog/travel/ultimate-carry-on-packing-list-cover.jpg
+cover_image_src: uploads/blog/travel/ultimate-carry-on-packing-list-cover.jpg
 edited: false
 published: true
 tags:

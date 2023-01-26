@@ -1,7 +1,7 @@
 ---
 date: 2022-12-07T21:12:31.593Z
 title: "Check out this discreet mini stun gun disguised as a key fob"
-cover_image: uploads/blog/edc/mini-stun-gun-disguised-as-a-key-fob-cover.jpg
+cover_image_src: uploads/blog/edc/mini-stun-gun-disguised-as-a-key-fob-cover.jpg
 edited: false
 published: true
 tags:

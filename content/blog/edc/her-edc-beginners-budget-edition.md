@@ -1,7 +1,7 @@
 ---
 date: 2022-12-13T21:12:31.593Z
 title: New to EDC? A baddie? On a budget? Here are my best EDC picks for beginner baddies on a budget
-cover_image: uploads/blog/edc/her-edc-beginners-budget-edition-cover.jpg
+cover_image_src: uploads/blog/edc/her-edc-beginners-budget-edition-cover.jpg
 edited: false
 published: false
 tags:

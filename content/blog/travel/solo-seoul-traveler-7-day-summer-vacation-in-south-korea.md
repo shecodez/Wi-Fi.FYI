@@ -1,7 +1,7 @@
 ---
 date: 2023-01-24T21:12:31.593Z
 title: "Solo Seoul traveler: summer vacation in South Korea"
-cover_image: uploads/blog/travel/solo-seoul-traveler-7-day-summer-vacation-in-south-korea-cover.jpg
+cover_image_src: uploads/blog/travel/solo-seoul-traveler-7-day-summer-vacation-in-south-korea-cover.jpg
 edited: false
 published: true
 tags:

@@ -8,8 +8,8 @@ import tokyoImg from '@/assets/images/tokyo.png'
       <article prose dark:prose-invert>
         <h1>About</h1>
         <p>
-          Hi there! 👋<br> Welcome to VviFi.FYI the 🔥hotspot for Tech & Travel gear, EDC, and all the Nerdy 💩 ($#!+) in between.
-          Here you can look forward to all the brutally honest 😇 tech and gadget reviews, nerd herd podcasts, and travel exploration you can handle... and some you can't. 😈
+          Hi there! 👋<br> Welcome to VviFi.FYI the 🔥hotspot for Tech, Travel, and Food FYI.
+          Here you can look forward to all the brutally honest 😇 tech and gadget reviews, Cringey Corner podcasts, and travel exploration you can handle... and some you can't. 😈
         </p>
         <h3><em>Tentative</em> Schedule:</h3>
         <ul>

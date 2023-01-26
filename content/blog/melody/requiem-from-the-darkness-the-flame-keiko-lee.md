@@ -1,7 +1,7 @@
 ---
 date: 2023-01-23T21:10:35.593Z
 title: "Requiem from the Darkness - The Flame by Keiko Lee"
-iframe_url: https://www.youtube-nocookie.com/embed/vDmP_ecr2X4
+cover_video_src: https://www.youtube-nocookie.com/embed/vDmP_ecr2X4
 edited: false
 published: true
 tags:
@@ -9,12 +9,16 @@ tags:
   - melody
   - melodious
   - monday
-  - melodious monday
-  - nerdy
+  - melodious-monday
+  - nerd
   - anime
   - nerd
 description: Requiem from the Darkness** (京極夏彦 巷説百物語, Kyōgoku Natsuhiko Kōsetsu Hyaku Monogatari, lit. "Natsuhiko Kyogoku's Hundred Stories")
 ---
+
+Welcome to the first episode of **Melodious Mondays**. This time we're listening to _The Flame_ by Keiko Lee.
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1ltgcguGJaI9gHgSjS0Ih6?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 **Requiem from the Darkness** (京極夏彦 巷説百物語, _Kyōgoku Natsuhiko Kōsetsu Hyaku Monogatari_, lit. "Natsuhiko Kyogoku's Hundred Stories") is a horror and mystery anime series produced by **TMS Entertainment**, directed by **Hideki Tonokatsu** and written by **Yoshinobu Fujioka**.
 

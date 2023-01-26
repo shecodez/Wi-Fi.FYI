@@ -1,7 +1,7 @@
 ---
 date: 2023-01-04T21:12:31.593Z
 title: Limitless GOLDKEY Antimicrobial Hand Tool & Stylus
-cover_image: uploads/blog/wtf/goldkey-antimicrobial-no-touch-tool-cover.jpg
+cover_image_src: uploads/blog/wtf/goldkey-antimicrobial-no-touch-tool-cover.jpg
 edited: false
 published: true
 tags:

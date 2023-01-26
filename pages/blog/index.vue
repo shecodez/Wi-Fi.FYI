@@ -1,6 +1,6 @@
 <script setup>
 const blogQuery = queryContent('blog')
-  .only(['_path', 'title', 'description', 'date', 'cover_image', 'iframe_url'])
+  .only(['_path', 'title', 'description', 'date', 'cover_image_src', 'cover_video_src', 'cover_slide_arr'])
   .sort({ date: -1 })
   .find() // ; <ContentList :query="blogQuery">
 const { data: posts } = await useAsyncData('blog', async () => {
@@ -28,7 +28,7 @@ useHead({
             example row-span-2
           </div> -->
           <template v-for="(p, i) in posts" :key="`post-${i}`">
-            <BlogGridPost :post="p" :show-text-left="i % 2 === 0" :show-media-only="p.iframe_url" />
+            <BlogGridPost :post="p" :show-text-left="i % 2 === 0" :show-media-only="p.cover_video_src" />
           </template>
         </BlogGrid>
       </client-only>

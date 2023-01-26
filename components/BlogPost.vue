@@ -13,8 +13,8 @@ defineProps(['data'])
     </NuxtLink>
 
     <header v-if="data.post" py-4>
-      <div v-if="data.post.cover_image" h-96 mb-12>
-        <img :src="`/${data.post.cover_image}`" :alt="data.post.title" rounded-2xl h-full w-full object-cover>
+      <div v-if="data.post.cover_image_src" h-96 mb-12>
+        <img :src="`/${data.post.cover_image_src}`" :alt="data.post.title" rounded-2xl h-full w-full object-cover>
       </div>
 
       <div v-if="data.post.date" text-sm flex items-center gap-2>
