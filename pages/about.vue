@@ -14,15 +14,15 @@ import tokyoImg from '@/assets/images/tokyo.png'
         <h3><em>Tentative</em> Schedule:</h3>
         <ul>
           <li>
-            <NuxtLink to="/topics/money">
-              Money Money
+            <NuxtLink to="/topics/melody">
+              Melodious
             </NuxtLink> - <b>Mondays</b>
           </li>
           <li>
             <NuxtLink to="/topics/travel">
-              Travel
+              Travel for VviFi
             </NuxtLink> - <b>Tuesdays</b>
-            <i text-xs>FYI - Tuesday is the cheapest day to fly ✈️</i>
+            <i text-xs block text-gray>FYI - Tuesday is the cheapest day to fly ✈️</i>
           </li>
           <li>
             <NuxtLink to="/topics/wtf">
@@ -31,16 +31,17 @@ import tokyoImg from '@/assets/images/tokyo.png'
           </li>
           <li>
             <NuxtLink to="/topics/edc">
-              Technically <i>'Her'</i> EDC
+              Throwback
             </NuxtLink> - <b>Thursdays</b>
           </li>
           <li>
             <NuxtLink to="/blog/tags/fat">
               FAT (Food Adventure Time)
             </NuxtLink> - <b>Fridays</b>
+            <i text-xs block text-gray>FYI (For Your Information) Fridays (rare)</i>
           </li>
           <li>
-            <b>Saturday</b> or <b>Sunday</b> - <NuxtLink to="/blog/tags/special">
+            <b>Saturday</b> / <b>Sunday</b> - <NuxtLink to="/blog/tags/special">
               Special
             </NuxtLink> (rare)
           </li>

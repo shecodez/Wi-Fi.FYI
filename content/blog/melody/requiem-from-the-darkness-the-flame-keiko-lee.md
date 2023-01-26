@@ -6,6 +6,7 @@ edited: false
 published: true
 tags:
   - music
+  - melody
   - melodious
   - monday
   - melodious monday

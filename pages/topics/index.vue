@@ -10,7 +10,7 @@ const topicBgSrc = new Map([
   ['Edc', 'Karol D'],
   ['Travel', 'Aleksandar Pasaric'],
   ['Wtf', 'Imani Williams'],
-  ['Melodious', 'Elviss Railijs Bitāns'],
+  ['Melody', 'Elviss Railijs Bitāns'],
 ])
 </script>
 
