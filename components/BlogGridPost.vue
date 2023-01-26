@@ -1,36 +1,31 @@
 <script setup>
 import { formatDate } from '~~/utils'
-defineProps(['post', 'showTextLeft', 'showMediaOnly'])
+defineProps(['post', 'showTextLeft', 'isMediaOnly', 'isSlideShow'])
 
 const postTypeClasses = [
-  { type: 'height-2x', classes: 'row-span-2' }, // post.type === 'gallery'
-  { type: 'text-only', classes: 'text-2xl' }, // post.type === 'quote'
+  { type: 'height-2x', classes: 'row-span-2' },
+  { type: 'text-only', classes: 'text-2xl' },
 ]
-// prop showMediaOnly -> can be post.cover_image_src | post.cover_video | post.cover_gallery
 </script>
 
 <template>
   <div relative aspect-video flex bg-gray-200 dark:bg-gray-900 class="post" :class="showTextLeft && 'flex-row-reverse'">
-    <div v-if="post.type === 'quote'" absolute inset-0 opacity-10 text-9xl class="quote-icon">
+    <div v-if="post.isTitleOnly" absolute inset-0 opacity-10 text-9xl class="quote-icon">
       <div i-carbon:quotes />
     </div>
 
-    <div v-if="post.cover_image_src" flex-1 overflow-hidden>
-      <!-- <Carousel v-if="post.type === 'gallery'" :slides="post.gallery" /> -->
-      <img :src="`/${post.cover_image_src}`" :alt="post.title" object-cover w-full h-full>
-    </div>
-    <div v-else-if="post.cover_video_src" relative flex-1 overflow-hidden>
-      <Iframe :src="post.cover_video_src" width="100%" height="100%" />
-      <NuxtLink :to="post._path" absolute top-0 right-0 px-1 py-1 text-sm class="rainbow-bg">
+    <div relative flex-1 overflow-hidden>
+      <img v-if="post.cover_image_src" :src="`/${post.cover_image_src}`" :alt="post.title" object-cover w-full h-full>
+      <Carousel v-else-if="isSlideShow" :slides="post.cover_slide_arr" />
+      <Iframe v-else-if="post.cover_video_src" :src="post.cover_video_src" width="100%" height="100%" />
+      <NuxtLink v-if="isMediaOnly" :to="post._path" absolute top-0 right-0 px-1 py-1 text-sm class="rainbow-bg">
         <div i-carbon:caret-right />
       </NuxtLink>
     </div>
 
-    <div v-if="!showMediaOnly" relative p-4 flex-1 flex flex-col items-stretch class="text-container">
-      <template v-if="post.cover_image_src">
-        <div v-if="showTextLeft" border-l-gray-200 dark:border-l-gray-900 class="arrow arrow-right" />
-        <div v-else border-r-gray-200 dark:border-r-gray-900 class="arrow arrow-left" />
-      </template>
+    <div v-if="!isMediaOnly" relative p-4 flex-1 flex flex-col items-stretch class="text-container">
+      <div v-if="showTextLeft" class="arrow arrow-right border-l-gray-200 dark:border-l-gray-900" />
+      <div v-else class="arrow arrow-left border-r-gray-200 dark:border-r-gray-900" />
 
       <div flex items-center gap-1 text-sm>
         <div i-carbon:data-enrichment />
@@ -76,12 +71,14 @@ const postTypeClasses = [
 }
 .arrow-right {
   border-left: 20px solid transparent;
-  right: -1rem;
-  /* @apply  right--4; */
+  right: -1.25rem;
+  border-left-color: rgb(229, 231, 235);
+  /* @apply  right--5; */
 }
 .arrow-left {
   border-right: 20px solid transparent;
-  left: -1rem;
-  /* @apply  -left-4; */
+  left: -1.25rem;
+  border-right-color: rgb(229, 231, 235);
+  /* @apply  -left-5; */
 }
 </style>

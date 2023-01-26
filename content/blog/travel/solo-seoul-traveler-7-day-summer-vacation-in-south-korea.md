@@ -1,7 +1,12 @@
 ---
 date: 2023-01-24T21:12:31.593Z
 title: "Solo Seoul traveler: summer vacation in South Korea"
-cover_image_src: uploads/blog/travel/solo-seoul-traveler-7-day-summer-vacation-in-south-korea-cover.jpg
+cover_slide_arr:
+  - uploads/blog/travel/solo-seoul-traveler-7-day-summer-vacation-in-south-korea-cover/flight.jpg
+  - uploads/blog/travel/solo-seoul-traveler-7-day-summer-vacation-in-south-korea-cover/accommodation.jpg
+  - uploads/blog/travel/solo-seoul-traveler-7-day-summer-vacation-in-south-korea-cover/public-transit.jpg
+  - uploads/blog/travel/solo-seoul-traveler-7-day-summer-vacation-in-south-korea-cover/food.jpg
+  - uploads/blog/travel/solo-seoul-traveler-7-day-summer-vacation-in-south-korea-cover/adventure.jpg
 edited: false
 published: true
 tags:
@@ -38,12 +43,12 @@ Welcome to the first episode of **Travel for VviFi Tuesday**. This time we're tr
 
 **Flight Total: $1,410 USD** 😭
 
-### Accommodations
+### Accommodation
 * 👉Budget: 20,000 KRW to 30,000 KRW per night for a hostel or budget hotel
 * Moderate: 50,000 KRW to 80,000 KRW per night for a mid-range hotel
 * Luxury: 100,000 KRW or more per night for a high-end hotel
 
-**Accomodations Total: $210 USD**
+**Accomodation Total: $210 USD**
 
 **Note**: _I'll actually be in South Korea for the whole month of June so I booked an Airbnb for June 2 - July 1 for $859 which is discounted due to the length of stay. This also allowed me to keep it budget-friendly at less than 30 USD a night._
 

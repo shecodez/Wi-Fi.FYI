@@ -28,7 +28,7 @@ useHead({
             example row-span-2
           </div> -->
           <template v-for="(p, i) in posts" :key="`post-${i}`">
-            <BlogGridPost :post="p" :show-text-left="i % 2 === 0" :show-media-only="p.cover_video_src" />
+            <BlogGridPost :post="p" :show-text-left="i % 2 === 0" :is-media-only="p.cover_video_src" :is-slide-show="!!p.cover_slide_arr" />
           </template>
         </BlogGrid>
       </client-only>
