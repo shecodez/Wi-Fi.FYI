@@ -19,7 +19,6 @@ useHead({
       `,
       type: 'text/javascript',
     },
-
   ],
 })
 </script>

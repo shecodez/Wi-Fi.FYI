@@ -18,7 +18,7 @@ Welcome to another WTF Wednesday post. Today's wonderful tech find is a staple i
 <img src="https://res.cloudinary.com/shecodez/image/upload/v1674702894/vvifi_fyi%20blog/budi-9-in-1_in_tech_pouch.jpg" alt="Budi 9-in-1 in my tech pouch" />
 
 ## WTF is that? 
-Why glad you asked. It’s my magic USB wand. Here’s a rundown of the features:
+Why glad you asked. I dub it my [magic USB wand](https://amzn.to/3JkPIHY). Here’s a rundown of the features:
 
 1. microSD memory card reader
 2. MicroSD card storage (x6)
@@ -34,6 +34,6 @@ Why glad you asked. It’s my magic USB wand. Here’s a rundown of the features
 
 <img src="https://res.cloudinary.com/shecodez/image/upload/v1674699667/vvifi_fyi%20blog/budi-9in1-usb-reader.jpg" alt="Budi 9-in-1" />
 
-At the time of this writing, it's available on Amazon for $22.99. Run dont walk, you can thank me later. 😊
+At the time of this writing, the [Budi 9-in-1](https://amzn.to/3JkPIHY) is available on Amazon for $22.99. Run dont walk, you can thank me later. 😊
 
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin" style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=vvifi_fyi-20&language=en_US&marketplace=amazon&region=US&placement=B09HPP75RS&asins=B09HPP75RS&linkId=bb17283dfc2aa0a4ad4a74713e6289ba&show_border=true&link_opens_in_new_window=true"></iframe>
