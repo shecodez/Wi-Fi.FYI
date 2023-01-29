@@ -22,10 +22,18 @@ description: A healthy and flavorful Middle Eastern dish that is both refreshing
 
 Happy Friday! Welcome to the first episode of **FAT (Food Adventure Time) Friday**. 🎉 Today we’re making _Quinoa Tabbouleh_.
 
-## Time
+## Times
 - **Prep time**: 10 minutes
 - **Cook time**: 25 minutes 
 - **Chill time**: 10 minutes
+
+## Nutritional Info (per serving)
+- **Calories**: 156
+- **Total fat**: 2g
+- **Sodium**: 20mg
+- **Carbohydrates**: 34g
+- **Fiber**: 7g
+- **Protein**: 8g
 
 ## Ingredients
 - 1 cup of uncooked quinoa (I like the colorfulness of tri-colored quinoa)

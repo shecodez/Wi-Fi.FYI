@@ -92,9 +92,9 @@ a:hover {
 }
 
 .banner {
-  height: 25%;
+  height: 14%;
   position: absolute;
-  right: 10%;
+  left: 10%;
   top: 0;
 }
 
@@ -125,7 +125,7 @@ a:hover {
     height: 50%;
   }
   .banner {
-    height: 10%;
+    height: 7%;
   }
 }
 </style>
