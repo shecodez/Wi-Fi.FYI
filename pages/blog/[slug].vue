@@ -7,10 +7,13 @@ const { data } = await useAsyncData(`post-${path}`, async () => {
   // fetch document where the document path matches with the cuurent route
   const post = queryContent().where({ _path: path }).findOne()
   // get the surround information, which is an array of documents that come before and after the current document
-  // let surround = queryContent('/blog').sort({ date: 1 }).findSurround(path)//.only(["_path", "title", "description"]);
+  const surround = queryContent('/blog').only(['_path', 'title']).sort({ date: 1 }).findSurround(path)
+
   return {
     post: await post,
-    // surround: await surround,
+    surround: await surround,
+    // prevPost: await prev,
+    // nextPost: await next,
   }
 })
 const config = useRuntimeConfig()

@@ -35,6 +35,8 @@ Happy Friday! Welcome to the first episode of **FAT (Food Adventure Time) Friday
 - **Fiber**: 7g
 - **Protein**: 8g
 
+> ⚠️ **DISCLOSURE** ⚠️ I only endorse things I use and love. If you choose to purchase anything using my referral links as an Amazon Associate, I may earn a small commission from qualifying purchases. However, there is absolutely NO extra cost to you.
+
 ## Ingredients
 - 1 cup of uncooked quinoa (I like the colorfulness of tri-colored quinoa)
 - 2 cups of water or vegetable broth (mushroom broth FTW)

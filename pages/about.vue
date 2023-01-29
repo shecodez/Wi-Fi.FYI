@@ -30,7 +30,7 @@ import tokyoImg from '@/assets/images/tokyo.png'
             </NuxtLink> - <b>Wednesday</b>
           </li>
           <li>
-            <NuxtLink to="/topics/edc">
+            <NuxtLink to="/topics/throwback">
               Throwback
             </NuxtLink> - <b>Thursdays</b>
           </li>

@@ -2,6 +2,7 @@
 const img = ref()
 onMounted(() => {
   img.value = new Image()
+  // sprite sheet creator: https://hredbird.itch.io
   img.value.src = 'https://res.cloudinary.com/shecodez/image/upload/v1674961321/vvifi_fyi%20blog/bunny-Sheet.png'
   img.value.onload = function () {
     init()

@@ -1,5 +1,6 @@
 <script setup>
 import BlogCommentSection from './blog/BlogCommentSection.vue'
+import BlogSurroundPostSection from './blog/BlogSurroundPostSection.vue'
 import { formatDate } from '~~/utils'
 
 defineProps(['data'])
@@ -22,9 +23,14 @@ defineProps(['data'])
         <span>{{ formatDate(new Date(data.post.date)) }}</span>
       </div>
 
-      <h1 py-4 font-extrabold text-5xl max-w-5xl class="rainbow-text title">
-        {{ data.post.title }}
-      </h1>
+      <div py-4>
+        <h1 font-extrabold text-5xl max-w-5xl class="rainbow-text title">
+          {{ data.post.title }}
+        </h1>
+        <div v-if="!data.post.cover_image_src && data.post.description" text-gray>
+          {{ data.post.description }}
+        </div>
+      </div>
 
       <h4 v-if="data.post.author" text-gray-400>
         by: {{ data.post.author }}
@@ -59,6 +65,8 @@ defineProps(['data'])
             </ContentRenderer>
           </client-only>
         </article>
+
+        <BlogSurroundPostSection :surround-posts="data.surround " />
 
         <BlogCommentSection :slug="data.post._path" />
       </div>
