@@ -12,7 +12,7 @@ const [prevPost, nextPost] = props.surroundPosts
           <div i-carbon:arrow-left />
           <span text-gray text-xs>Previous Post</span>
         </div>
-        <h3 text-lg text-right>
+        <h3 text-lg text-right line-clamp-3>
           <span text-orange>{{ prevPost._path.split('/')[2] }}</span> {{ prevPost.title }}
         </h3>
       </div>
@@ -24,7 +24,7 @@ const [prevPost, nextPost] = props.surroundPosts
           <span text-gray text-xs>Next Post</span>
           <div i-carbon:arrow-right />
         </div>
-        <h3 text-lg>
+        <h3 text-lg line-clamp-3>
           <span text-orange>{{ nextPost._path.split('/')[2] }}</span> {{ nextPost.title }}
         </h3>
       </div>

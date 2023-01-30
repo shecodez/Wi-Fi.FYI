@@ -135,6 +135,8 @@ declare module '@nuxt/schema' {
 
     siteUrl: string,
 
+    cloudinaryResUrl: string,
+
     reCaptchaSiteKey: string,
 
     content: {

@@ -1,9 +1,13 @@
 <script setup lang="ts">
+const config = useRuntimeConfig()
+
+const cloudinaryResUrl = config.public.cloudinaryResUrl
+
 const img = ref()
 onMounted(() => {
   img.value = new Image()
-  // sprite sheet creator: https://hredbird.itch.io
-  img.value.src = 'https://res.cloudinary.com/shecodez/image/upload/v1674961321/vvifi_fyi%20blog/bunny-Sheet.png'
+  // sprite sheet creator: https://chariart.itch.io
+  img.value.src = `${cloudinaryResUrl}/image/upload/v1675097780/vvifi_fyi%20blog/calicoKitty_curiousIdleBreaker.png`
   img.value.onload = function () {
     init()
   }
@@ -13,8 +17,8 @@ const canvas = ref<HTMLCanvasElement>()
 const ctx = ref()
 
 const scale = 2
-const width = 55
-const height = 74
+const width = 64
+const height = 64
 const scaledWidth = scale * width
 const scaledHeight = scale * height
 
@@ -49,7 +53,7 @@ function step() {
     currentRow++
   }
   // Reset to the starting row
-  if (currentRow >= 1)
+  if (currentRow >= 2)
     currentRow = 0
 
   window.requestAnimationFrame(step)
@@ -58,7 +62,7 @@ function step() {
 
 <template>
   <div class="vvifimon-avatar">
-    <canvas ref="canvas" width="100" height="150" />
+    <canvas ref="canvas" width="128" height="128" />
   </div>
 </template>
 

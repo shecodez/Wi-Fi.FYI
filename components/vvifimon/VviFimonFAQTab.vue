@@ -26,12 +26,25 @@ function setSelectedAnswerIndex(faqIndex: number) {
 
 <style scoped>
 .faq {
-  @apply p-3;
+  padding: 0.75rem;
+  /* @apply p-3; */
 }
 .faq-q {
-  @apply rounded-l rounded-tl-3xl  rounded-r rounded-br-3xl bg-orange;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 1.5rem;
+  background-color: rgba(251, 146, 60);
+  /* @apply rounded-bl rounded-tl-3xl rounded-tr rounded-br-3xl bg-orange; */
 }
 .faq-a {
-  @apply rounded-br rounded-tr-3xl rounded-l-3xl bg-gray;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(107, 114, 128);
+  /* @apply rounded-br rounded-tr-3xl rounded-l-3xl bg-gray-5; */
 }
 </style>

@@ -17,7 +17,8 @@ function setActiveTabIndex(index: number) {
   activeTabIndex.value = index
 }
 
-const commandList = [{ label: '/sit' }, { label: '/feed', timeout: '5000' }, { label: '/sleep' }]
+// const commandList = [{label: '/help'}, { label: '/sit' }, { label: '/feed', timeout: '5000' }, { label: '/sleep' }]
+const commandList = []
 const activeCommand = ref('')
 const activeCommandIndex = ref()
 function setActiveCommand(cmd: string) {

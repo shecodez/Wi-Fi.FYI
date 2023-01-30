@@ -43,9 +43,12 @@ function handleAnimationDuration(cmdIndex: number, timeout: number) {
 
 <template>
   <div flex flex-wrap gap-4>
+    <div v-if="!!!commands.length" text-center text-gray>
+      Play coming soon!
+    </div>
     <template v-for="(c, i) in commands" :key="`cmd-${i}`">
       <div flex flex-col gap-4>
-        <button class="cmd cmd-btn border-4" :class="isActiveCmdIndexArr[i] ? 'border-4' : 'b-transparent'" @click="play(i, c.timeout)">
+        <button class="cmd cmd-btn" :class="isActiveCmdIndexArr[i] ? 'border-4' : 'b-transparent'" @click="play(i, c.timeout)">
           {{ c.label }}
         </button>
       </div>
@@ -55,9 +58,20 @@ function handleAnimationDuration(cmdIndex: number, timeout: number) {
 
 <style scoped>
 .cmd {
-  @apply p-3;
+  padding: 0.75rem;
+  border-width: 4px;
+  border-style: dashed;
+  /* @apply p-3 border-4 border-dashed; */
 }
 .cmd-btn {
-  @apply rounded-l rounded-tl-3xl  rounded-r rounded-br-3xl bg-orange hover:bg-orange-6;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 1.5rem;
+  background-color: rgba(251, 146, 60);
+  @apply rounded-bl rounded-tl-3xl rounded-tr rounded-br-3xl bg-orange hover:bg-orange-6;
+}
+.cmd-btn:hover {
+  background-color: rgb(234, 88, 12);
 }
 </style>

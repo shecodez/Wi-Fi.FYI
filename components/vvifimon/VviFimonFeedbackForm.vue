@@ -77,24 +77,24 @@ async function postFeedbackForm() {
     <form flex flex-col gap-4>
       <div class="form-control">
         <label for="email">E-Mail</label>
-        <input v-model="formData.email" name="email" type="email" required>
+        <input v-model="formData.email" name="email" type="email" required bg-gray-300 dark:bg-gray-800>
       </div>
 
       <input v-model="formData.bot" type="hidden" name="bot">
 
       <div class="form-control">
         <label for="message">Message</label>
-        <textarea v-model="formData.message" rows="2" name="message" required />
+        <textarea v-model="formData.message" rows="2" name="message" required bg-gray-300 dark:bg-gray-800 />
       </div>
 
       <div flex items-center gap-2>
-        <input v-model="formData.subscribe" name="subscribe" type="checkbox">
+        <input v-model="formData.subscribe" name="subscribe" type="checkbox" bg-gray-300 dark:bg-gray-800>
         <label for="subscribe">
           Subscribe to the Newsletter
         </label>
       </div>
 
-      <button self-start mt-2 class="btn btn-orange">
+      <button self-start mt-2 py-2 px-6 rounded-l rounded-tl-3xl rounded-r rounded-br-3xl class="btn-orange">
         <div flex items-center gap-2>
           <div v-if="!state.loading" i-carbon:send-alt-filled />
           <span>{{ state.loading ? 'Loading...' : 'Send' }}</span>
@@ -106,17 +106,31 @@ async function postFeedbackForm() {
 
 <style scoped>
 .form-control {
-  @apply flex flex-col gap-1;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 0.25rem;
+  gap: 0.25rem;
+  /* @apply flex flex-col gap-1; */
 }
 .form-control label {
-  @apply self-start text-sm;
+  align-self: start;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  /* @apply self-start text-sm; */
 }
 .form-control input, .form-control textarea {
-  @apply p-2 bg-gray-300 dark:bg-gray-800;
+  padding: 0.5rem;
+  /* @apply p-2 bg-gray-300 dark:bg-gray-800; */
 }
 
 .btn-orange {
-  @apply bg-orange hover:bg-orange-6 text-lg;
+  background-color: rgb(251, 146, 60);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  /* @apply bg-orange hover:bg-orange-6 text-lg; */
+}
+.btn-orange:hover {
+  background-color: rgb(234, 88, 12);
 }
 .btn {
   @apply py-2 px-6 rounded-l rounded-tl-3xl  rounded-r rounded-br-3xl;

@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const config = useRuntimeConfig()
+
+const cloudinaryResUrl = config.public.cloudinaryResUrl
+
 const audio = ref()
 const isPlaying = ref(false)
 
@@ -28,7 +32,7 @@ async function toggleThemeSong() {
   </button>
 
   <audio ref="audio" :onended="stopAudio">
-    <source src="https://res.cloudinary.com/shecodez/video/upload/v1674951689/vvifi_fyi%20blog/Ariana-Grande-positions-MOZ%CE%9BRT-Remix.mp3" type="audio/mpeg">
+    <source :src="`${cloudinaryResUrl}/video/upload/v1674951689/vvifi_fyi%20blog/Ariana-Grande-positions-MOZ%CE%9BRT-Remix.mp3`" type="audio/mpeg">
   </audio>
 </template>
 

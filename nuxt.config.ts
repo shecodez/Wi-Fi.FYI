@@ -33,6 +33,7 @@ export default defineNuxtConfig({
       appName: 'VviFi . FYI',
       appDescription: 'VviFi.FYI - VviFi’s –hotspot for Tech, Travel, and Food –FYI',
       siteUrl: 'https://vvifi.fyi',
+      cloudinaryResUrl: process.env.CLOUDINARY_RES_URL,
       reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
       // mailchimpListId: process.env.MAILCHIMP_LIST_ID,
     },
