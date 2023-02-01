@@ -5,6 +5,7 @@ cover_image_src: uploads/blog/travel/ultimate-carry-on-packing-list-cover.jpg
 edited: false
 published: true
 tags:
+  - travel-for-vvifi
   - travel
   - travel-gear
   - packing

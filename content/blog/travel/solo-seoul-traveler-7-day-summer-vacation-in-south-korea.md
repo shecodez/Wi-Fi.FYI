@@ -15,8 +15,8 @@ tags:
   - travel
   - south-korea
   - budget-friendly
-  - Vacation
-  - travel-for-vvif
+  - vacation
+  - travel-for-vvifi
   - 7-day
   - week-long
 description: "PoV: I want to go to South Korea in June for a week-long vacation on a budget"
