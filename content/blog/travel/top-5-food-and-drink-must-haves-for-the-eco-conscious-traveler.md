@@ -21,6 +21,8 @@ Traveling is an opportunity to explore, make connections, and eat. However, it c
 
 To reduce waste and be more eco-conscious, adopt sustainable practices, such as using reusable items for food and drink. Not only do they help reduce waste, but they're also convenient and practical for travelers, especially in places where sanitation is questionable. From a reusable water bottle to collapsible cutlery, these items can make a difference in reducing your carbon footprint while on the go. Today’s post will cover the top 5 food and drink reusable and collapsible must-haves for travel. So, let's dive in!
 
+> ⚠️ **DISCLOSURE** ⚠️ I only endorse things I use and love. If you choose to purchase anything using my referral links as an Amazon Associate, I may earn a small commission from qualifying purchases. However, there is absolutely NO extra cost to you.
+
 ## 1. Reusable Water Bottle
 
 <img src="https://res.cloudinary.com/shecodez/image/upload/v1675225351/vvifi_fyi%20blog/My-Engraved-Fellow-16oz-_Carter-Everywhere-Travel-Mug.jpg" alt="My Engraved Fellow 16 oz Carter Everywhere Travel Mug" /> 

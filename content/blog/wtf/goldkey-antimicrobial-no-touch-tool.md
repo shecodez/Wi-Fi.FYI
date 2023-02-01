@@ -11,6 +11,7 @@ tags:
   - edc
   - gadget
   - diy
+  - vvifi-hotspot
 description: open doors (of the non-knob variety), press buttons, and reduce the number of germ-infested surfaces you come into contact with daily with no-touch tools
 ---
 

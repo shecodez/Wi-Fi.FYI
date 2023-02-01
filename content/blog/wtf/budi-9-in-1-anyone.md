@@ -10,12 +10,16 @@ tags:
   - edc
   - multi-tool
   - gadget
+  - vvifi-hotspot
+  - vvifi-tech-pouch
 description: What if I said you could have a microSD memory card reader that can store microSD cards, SIM cards, a SIM card extraction tool, a USB-C to USB-C cable, a USB A, Lightning, and micro USB adapter, and even has a phone stand
 ---
 
 Welcome to another WTF Wednesday post. Today's wonderful tech find is a staple in my tech pouch.
 
-<img src="https://res.cloudinary.com/shecodez/image/upload/v1674702894/vvifi_fyi%20blog/budi-9-in-1_in_tech_pouch.jpg" alt="Budi 9-in-1 in my tech pouch" />
+> ⚠️ **DISCLOSURE** ⚠️ I only endorse things I use and love. If you choose to purchase anything using my referral links as an Amazon Associate, I may earn a small commission from qualifying purchases. However, there is absolutely NO extra cost to you.
+
+<img src="https://res.cloudinary.com/shecodez/image/upload/v1674702894/vvifi_fyi%20blog/budi-9-in-1_in_tech_pouch.jpg" alt="Budi 9-in-1 in ViFi's tech pouch" />
 
 ## WTF is that? 
 Why glad you asked. I dub it my [magic USB wand](https://amzn.to/3JkPIHY). Here’s a rundown of the features:
@@ -29,8 +33,6 @@ Why glad you asked. I dub it my [magic USB wand](https://amzn.to/3JkPIHY). Here�
 7. USB-C to Lightning adapter
 8. USB-C to micro USB adapter
 9. Phone Stand
-
-> ⚠️ **DISCLOSURE** ⚠️ I only endorse things I use and love. If you choose to purchase anything using my referral links as an Amazon Associate, I may earn a small commission from qualifying purchases. However, there is absolutely NO extra cost to you.
 
 <img src="https://res.cloudinary.com/shecodez/image/upload/v1674699667/vvifi_fyi%20blog/budi-9in1-usb-reader.jpg" alt="Budi 9-in-1" />
 
