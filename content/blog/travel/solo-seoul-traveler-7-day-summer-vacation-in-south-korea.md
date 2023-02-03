@@ -11,14 +11,13 @@ edited: false
 published: true
 tags:
   - itinerary
-  - solo-traveler
+  - solo-travel
   - travel
   - south-korea
   - budget-friendly
   - vacation
   - travel-for-vvifi
   - 7-day
-  - week-long
 description: "PoV: I want to go to South Korea in June for a week-long vacation on a budget"
 ---
 

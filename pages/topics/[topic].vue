@@ -4,7 +4,7 @@ const {
 } = useRoute()
 
 const posts = await queryContent('blog', `${topic.toLowerCase().replace(' ', '-')}`)
-  .only(['_path', 'title', 'description', 'date', 'cover_image_src', 'cover_video_src', 'cover_slide_arr'])
+  .only(['_path', 'title', 'description', 'date', 'cover_image_src', 'cover_video_src', 'cover_slide_arr', 'is_media_only'])
   .sort({ date: -1 })
   .find()
 // const { data: posts } = useAsyncData(

@@ -9,8 +9,6 @@ tags:
   - melody
   - melodious
   - monday
-  - melodious-monday
-  - nerd
   - anime
   - nerd
 description: Requiem from the Darkness** (京極夏彦 巷説百物語, Kyōgoku Natsuhiko Kōsetsu Hyaku Monogatari, lit. "Natsuhiko Kyogoku's Hundred Stories")

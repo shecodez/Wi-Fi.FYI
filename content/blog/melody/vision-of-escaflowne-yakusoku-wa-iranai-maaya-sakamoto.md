@@ -9,10 +9,8 @@ tags:
   - melody
   - melodious
   - monday
-  - melodious-monday
   - nerd
   - anime
-  - nerd
 description: The Vision of Escaflowne (天空のエスカフローネ, Tenkū no Esukafurōne, lit. "Escaflowne of the Heavens")
 ---
 

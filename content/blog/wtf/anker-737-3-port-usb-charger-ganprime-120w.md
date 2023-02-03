@@ -8,9 +8,6 @@ tags:
   - wtf
   - tech
   - anker
-  - usb
-  - wallcharger
-  - gantech
   - charging
   - gadget
   - vvifi-hotspot

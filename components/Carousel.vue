@@ -37,7 +37,7 @@ watch(
     </transition> -->
     <template v-for="(s, i) in slides" :key="s">
       <transition name="slide-fade">
-        <img v-if="activeSlideIdx === i" :src="s" :alt="s.replace('-', ' ')" object-cover w-full h-full>
+        <img v-if="activeSlideIdx === i" :src="s" :alt="s.replace('-', ' ')" object-fit w-full h-full>
       </transition>
     </template>
 

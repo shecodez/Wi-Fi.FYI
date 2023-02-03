@@ -7,8 +7,9 @@ published: true
 tags:
   - throwback
   - thursday
+  - tbt
   - music
-  - 80s-classic
+  - classic-80s
   - oldie-but-goodie
   - r&b
   - dance-pop

@@ -9,7 +9,7 @@ tags:
   - travel
   - travel-gear
   - packing
-  - digital-nerdmad
+  - nerdy-nomad
 description: The best darn digital nerdmad carry on packing list ever!
 ---
 Okay who here gets a little stressed when it's time to pack for a trip? 
