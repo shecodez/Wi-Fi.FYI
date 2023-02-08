@@ -6,8 +6,7 @@ edited: false
 published: true
 tags:
   - music
-  - melody
-  - melodious
+  - mad
   - monday
   - nerd
   - anime

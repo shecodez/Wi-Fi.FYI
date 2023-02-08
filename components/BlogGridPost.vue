@@ -14,7 +14,7 @@ const postTypeClasses = [
       <div i-carbon:quotes />
     </div>
 
-    <div relative flex-1 overflow-hidden>
+    <div relative flex-1 overflow-hidden class="media-container" :class="showTextLeft ? 'pan-left' : 'pan-right'">
       <img v-if="post.cover_image_src" :src="`/${post.cover_image_src}`" :alt="post.title" object-cover w-full h-full>
       <Carousel v-else-if="isSlideShow" :slides="post.cover_slide_arr" />
       <Iframe v-else-if="post.cover_video_src" :src="post.cover_video_src" width="100%" height="100%" />
@@ -80,5 +80,24 @@ const postTypeClasses = [
   left: -1.25rem;
   border-right-color: rgb(229, 231, 235);
   /* @apply  -left-5; */
+}
+
+.media-container img {
+  overflow: hidden;
+  transition: transform .5s ease-in-out;
+  transform: scaleX(1.4);
+
+}
+.media-container.pan-left img {
+transform-origin: 0 0;
+}
+.media-container.pan-right img {
+transform-origin: 100% 0;
+}
+.media-container:hover.pan-left img {
+  transform: scaleX(1.4) translateX(-25%)
+}
+.media-container:hover.pan-right img {
+  transform: scaleX(1.4) translateX(25%)
 }
 </style>

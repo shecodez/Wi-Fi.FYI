@@ -7,15 +7,24 @@ import tokyoImg from '@/assets/images/tokyo.png'
     <div p-4 md:px-8 py-8 bg-white dark:bg-gray-800 shadow-md class="md:w-2/3 lg:w-1/2 xl:w-1/3 md:ml-20 lg:ml-40">
       <article prose dark:prose-invert>
         <h1>About</h1>
+
+        <p font-italic>
+          Hi there! 👋<br> Welcome to VviFi– the nerdy nomads hotspot for <NuxtLink to="/topics/wtf">
+            #Tech
+          </NuxtLink>, <NuxtLink to="/topics/travel">
+            #Travel
+          </NuxtLink>, and <NuxtLink to="/blog/tags/fat">
+            #Food
+          </NuxtLink> –.FYI
+        </p>
         <p>
-          Hi there! 👋<br> Welcome to VviFi.FYI the 🔥hotspot for Tech, Travel, and Food FYI.
-          Here you can look forward to all the brutally honest 😇 tech and gadget reviews, Cringey Corner podcasts, and travel exploration you can handle... and some you can't. 😈
+          Here you can look forward to all the brutally honest 😇 tech and gadget reviews, nerdy Cringey Corner podcasts, and travel & food adventure you can handle... and some you can't. 😈
         </p>
         <h3><em>Tentative</em> Schedule:</h3>
         <ul>
           <li>
-            <NuxtLink to="/topics/melody">
-              Melodious
+            <NuxtLink to="/topics/mad">
+              MAD (Music, Anime, & Drama)
             </NuxtLink> - <b>Mondays</b>
           </li>
           <li>
@@ -32,13 +41,18 @@ import tokyoImg from '@/assets/images/tokyo.png'
           <li>
             <NuxtLink to="/topics/throwback">
               Throwback
+            </NuxtLink> /
+            <NuxtLink to="/topics/thirsty">
+              Thirsty
             </NuxtLink> - <b>Thursdays</b>
           </li>
           <li>
             <NuxtLink to="/blog/tags/fat">
               FAT (Food Adventure Time)
+            </NuxtLink> /
+            <NuxtLink to="/blog/tags/fyi">
+              FYI
             </NuxtLink> - <b>Fridays</b>
-            <i text-xs block text-gray>FYI (For Your Information) Fridays (rare)</i>
           </li>
           <li>
             <b>Saturday</b> / <b>Sunday</b> - <NuxtLink to="/blog/tags/special">

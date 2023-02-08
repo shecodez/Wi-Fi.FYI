@@ -25,7 +25,7 @@ const contactForm = ref({ message: '' })
 const contactFormMessageLength = computed(() => contactForm.value?.message.length || 0)
 watch(contactFormMessageLength, (messageLength) => {
   if (!state.sent)
-    getNode('contactmessage').props.help = `${messageLength} / 500`
+    getNode('contactmessage')!.props.help = `${messageLength} / 500`
 })
 // https://formkit.com/advanced/custom-inputs#displaying-values
 function handleMessageInput() {
@@ -41,23 +41,24 @@ onMounted(() => {
 })
 
 // If all inputs are valid it fires the @submit event
-async function postContactForm(formData: any, node: FormKitNode) {
+async function postContactForm(_data: any, _node: FormKitNode | undefined) {
   state.loading = true
 
   try {
-    if (formData.bot) {
+    if (_data.bot) {
       state.isBot = true
     }
     else {
       // Wait for the reCAPTCHA token
       state.reCaptchaToken = await reCAPTCHA.value(reCaptchaAction)
 
+      const subject = _data.subject || '👋 vvifi.fyi/contact'
       const response = await fetch('/.netlify/functions/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ..._data, subject }),
       })
 
       // Throw an error if the response was not successful
@@ -69,7 +70,7 @@ async function postContactForm(formData: any, node: FormKitNode) {
     }
   }
   catch (error: any) {
-    node.setErrors(error)
+    _node!.setErrors(error)
     state.error = 'Error, please try again later.' // e.error_description || e.message
   }
   finally {

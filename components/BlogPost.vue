@@ -8,7 +8,7 @@ defineProps(['data'])
 
 <template>
   <div container mx-auto py-4>
-    <NuxtLink to="/blog" flex items-center gap-2 hover:text-orange>
+    <NuxtLink to="/blog" flex items-center gap-2 hover:text-orange flex-inline>
       <div i-carbon:arrow-left />
       Back to Blog
     </NuxtLink>

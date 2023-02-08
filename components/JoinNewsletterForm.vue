@@ -62,7 +62,7 @@ async function joinNewsletter() {
       ✔️ {{ state.successMessage }}
     </div>
     <div v-else class="form-control">
-      <label for="email" pb-2 text-xs font-bold>Join the <span uppercase>Free</span> <NuxtLink to="/about" text-orange hover:underline>VviFi</NuxtLink> 😉</label>
+      <label for="email" pb-2 text-xs font-bold>Join <NuxtLink to="/about" text-orange hover:underline>VviFi's Hotspot</NuxtLink> (it's <span uppercase>Free</span> ~FYI)</label>
       <div relative flex items-center>
         <input
           v-model="state.email"
@@ -74,7 +74,7 @@ async function joinNewsletter() {
         >
         <!-- <input type="hidden" name="listId" :value="mailchimpListId"> -->
         <button absolute right-0 p-3 hover:text-orange :class="state.loading && 'loading'">
-          <div i-carbon:arrow-right />
+          <div i-carbon:arrow-right style="position: relative; top: 50%; transform: translateY(25%);" />
           <span class="sr-only">Join</span>
         </button>
       </div>

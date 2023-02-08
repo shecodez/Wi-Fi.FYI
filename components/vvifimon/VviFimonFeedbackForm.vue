@@ -40,7 +40,7 @@ async function postFeedbackForm() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ ...formData, subject: 'vvifimon feedback' }),
+        body: JSON.stringify({ ...formData, subject: '👋 vvifimon feedback' }),
       })
 
       // Throw an error if the response was not successful

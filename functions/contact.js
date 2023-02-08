@@ -38,7 +38,7 @@ const sendContactFormEmail = async (formData) => {
     const mailData = {
       from: `${formData.name} <${formData.email}>`,
       to: CONTACT_EMAIL_ADDRESS,
-      subject: `${formData.subject} 👋 vvifi.fyi/contact`.trim(),
+      subject: formData.subject,
       text: formData.message,
     }
 
