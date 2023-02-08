@@ -3,7 +3,9 @@ declare module 'nitropack' {
   type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
   interface InternalApi {
     '/api/pageview': Awaited<ReturnType<typeof import('../../server/api/pageview').default>>
+    '/sitemap.xml': Awaited<ReturnType<typeof import('../../server/routes/sitemap.xml').default>>
     '/__nuxt_error': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/nuxt@3.0.0-rc.12_wyqvi574yv7oiwfeinomdzmc3m/node_modules/nuxt/dist/core/runtime/nitro/renderer').default>>
+    '/robots.txt': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxtjs+robots@3.0.0/node_modules/@nuxtjs/robots/dist/runtime/server/middleware').default>>
     '/api/_content/query/:qid': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.2.1/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>
     '/api/_content/query': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.2.1/node_modules/@nuxt/content/dist/runtime/server/api/query').default>>
     '/api/_content/cache.json': Awaited<ReturnType<typeof import('../../node_modules/.pnpm/@nuxt+content@2.2.1/node_modules/@nuxt/content/dist/runtime/server/api/cache').default>>

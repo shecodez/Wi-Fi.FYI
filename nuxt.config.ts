@@ -6,6 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxt/content',
     '@formkit/nuxt',
+    '@nuxtjs/algolia',
+    '@nuxtjs/robots',
     // '@nuxtjs/recaptcha',
   ],
   // recaptcha: {
@@ -14,6 +16,14 @@ export default defineNuxtConfig({
   //   size: 'normal',
   //   version: 2,
   // },
+  // robots: {
+  //   /* module options */
+  // },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml'],
+    },
+  },
   experimental: {
     reactivityTransform: true,
     inlineSSRStyles: false,
@@ -30,9 +40,9 @@ export default defineNuxtConfig({
     apiSecret: '123',
     // Config within public will be also exposed to the client
     public: {
-      appName: 'VviFi . FYI',
-      appDescription: 'VviFi.FYI - VviFi’s –hotspot for Tech, Travel, and Food –FYI',
-      siteUrl: 'https://vvifi.fyi',
+      appName: 'VviFi.FYI',
+      appDescription: 'VviFi– the nerdy nomads hotspot for #tech, #travel, and #food –.FYI',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://vvifi.fyi',
       cloudinaryResUrl: process.env.CLOUDINARY_RES_URL,
       reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
       // mailchimpListId: process.env.MAILCHIMP_LIST_ID,

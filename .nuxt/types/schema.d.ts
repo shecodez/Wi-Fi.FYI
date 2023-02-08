@@ -5,6 +5,8 @@ declare module '@nuxt/schema' {
     ["colorMode"]?: typeof import("@nuxtjs/color-mode").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["formkit"]?: typeof import("@formkit/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["algolia"]?: typeof import("@nuxtjs/algolia").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["robots"]?: typeof import("@nuxtjs/robots").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
   }
   interface RuntimeConfig {
@@ -213,6 +215,24 @@ declare module '@nuxt/schema' {
 
              exclude: Array<number>,
         },
+    },
+
+    algolia: {
+        apiKey: string,
+
+        applicationId: string,
+
+        lite: boolean,
+
+        cache: boolean,
+
+        instantSearch: boolean,
+
+        docSearch: any,
+
+        recommend: any,
+
+        globalIndex: string,
     },
   }
 }

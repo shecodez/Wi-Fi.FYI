@@ -67,6 +67,9 @@
       "#color-mode-options": [
         ".nuxt/color-mode-options"
       ],
+      "#robots": [
+        "robots.config"
+      ],
       "#head": [
         "node_modules/.pnpm/nuxt@3.0.0-rc.12_wyqvi574yv7oiwfeinomdzmc3m/node_modules/nuxt/dist/head/runtime"
       ],

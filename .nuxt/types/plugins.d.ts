@@ -10,6 +10,7 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.0.0-rc.12_wyqvi574yv7oiwfeinomdzmc3m/node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.0.0-rc.12_wyqvi574yv7oiwfeinomdzmc3m/node_modules/nuxt/dist/head/runtime/mixin-plugin").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.0.0-rc.12_wyqvi574yv7oiwfeinomdzmc3m/node_modules/nuxt/dist/pages/runtime/router").default> &
+  InjectionType<typeof import("../../node_modules/.pnpm/@nuxtjs+algolia@1.5.0/node_modules/@nuxtjs/algolia/dist/runtime/plugin").default> &
   InjectionType<typeof import("../formkitPlugin").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/@nuxt+content@2.2.1/node_modules/@nuxt/content/dist/runtime/plugins/ws").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/@nuxtjs+color-mode@3.1.8/node_modules/@nuxtjs/color-mode/dist/runtime/plugin.server").default> &

@@ -7,7 +7,7 @@ useHead({
 </script>
 
 <template>
-  <div id="contact" relative flex items-center justify-end class="p-contact">
+  <div id="contact" relative flex items-center justify-end mt-2 class="p-contact">
     <div id="map-container" absolute inset-0 bg-gray-300 dark:bg-gray-800>
       <iframe
         width="100%"
@@ -30,7 +30,7 @@ useHead({
 
 <style>
 div.p-contact {
-  min-height: calc(100vh - 6.5vh);
+  min-height: calc(100vh - 9vh);
 }
 .send-btn {
   width: 100px !important;

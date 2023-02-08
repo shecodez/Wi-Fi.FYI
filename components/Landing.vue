@@ -38,10 +38,46 @@ throttledWatch([mouseX, mouseY], ([x, y]) => {
 function resetEyes() {
   translate.value = 'translate(0px, 0px)'
 }
+
+const menuNav = [
+  { label: 'About', href: '/about' },
+  { label: 'VviFi\'s 🔥Hotspot', href: '/hotspot' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
+]
+
+const socialLinks = [
+  {
+    icon: 'i-carbon:logo-discord',
+    label: 'Discord',
+    link: 'https://discord.gg/kE4Xu7WsQK',
+  },
+  { icon: 'i-carbon:logo-instagram', label: 'Instagram', link: 'https://www.instagram.com/vvifi_fyi/' },
+  // { icon: 'i-carbon:logo-twitter', label: 'Twitter', link: 'https://twitter.com/vvifi_fyi' },
+  { icon: 'i-carbon:logo-youtube', label: 'YouTube', link: 'https://youtube.com/@vvifi_fyi' },
+  { icon: 'i-carbon:logo-pinterest', label: 'Pinterest', link: 'https://www.pinterest.com/vvifi_fyi/' },
+]
 </script>
 
 <template>
-  <img alt="VviFi Banner Logo" src="/images/logos/vvifi-banner.png" class="banner">
+  <header flex items-center justify-between absolute z-20 top-0 inset-x-10 md:inset-x-20>
+    <img alt="VviFi Banner Logo" src="/images/logos/vvifi-banner.png" class="banner" h-24 md:h-36>
+
+    <SideNavDrawer :nav-links="menuNav" :social-links="socialLinks">
+      <div title="Menu" md:hidden text-xl flex items-center gap-2 border-2 p-2>
+        <div i-carbon:menu />
+        <span uppercase>Menu</span>
+      </div>
+    </SideNavDrawer>
+    <nav text-2xl flex gap-4>
+      <template v-for="n in menuNav" :key="n.href">
+        <NuxtLink :to="n.href" font-bold hover:text-orange py-4 hidden md:block>
+          {{ n.label }}
+        </NuxtLink>
+      </template>
+    </nav>
+  </header>
+
   <div flex flex-col children:mx-auto class="avatar">
     <div relative>
       <img absolute alt="VviFi Avatar blinking" src="/avatar/under-construction-avatar-eye-closed-smile.png" class="a-blink-layer">
@@ -57,27 +93,17 @@ function resetEyes() {
   </h2>
   <div>~❤️ VviFi</div>
   <div flex gap-2 justify-center items-center text="xl gray4">
-    <a href="https://www.instagram.com/vvifi_fyi/">
-      <div i-carbon:logo-instagram><span sr-only>Instagram</span></div>
-    </a> ·
-    <a href="https://www.pinterest.com/vvifi_fyi/">
-      <div i-carbon:logo-pinterest><span sr-only>Pinterest</span></div>
-    </a> ·
-    <!-- <a href="https://www.tiktok.com/@vvifi_fyi">
-      <div ic:round-tiktok><span sr-only>Tik Tok</span></div>
-    </a> · -->
-    <a href="https://www.twitch.tv/vvifi_fyi">
-      <div text-2xl><IconsMdiTwitchSvg /> <span sr-only>Twitch</span></div>
-    </a> ·
+    <template v-for="s in socialLinks" :key="s.link">
+      <a :href="s.link" :title="s.label">
+        <div :class="s.icon"><span sr-only>{{ s.label }}</span></div>
+      </a> ·
+    </template>
     <a href="https://twitter.com/vvifi_fyi">
       <div i-carbon:logo-twitter><span sr-only>Twitter</span></div>
     </a><span ml--2>(RIP) ·</span>
-    <a href="https://youtube.com/@vvifi_fyi">
-      <div i-carbon:logo-youtube><span sr-only>YouTube</span></div>
-    </a> ·
-    <NuxtLink to="/blog">
-      Blog
-    </NuxtLink>
+    <a href="https://www.twitch.tv/vvifi_fyi">
+      <div text-2xl style="position: relative; top: 50%; transform: translateY(15%);"><IconsMdiTwitchSvg /> <span sr-only>Twitch</span></div>
+    </a>
   </div>
 </template>
 
@@ -89,13 +115,6 @@ a:hover {
 
 .avatar {
   height: 60%;
-}
-
-.banner {
-  height: 14%;
-  position: absolute;
-  left: 10%;
-  top: 0;
 }
 
 .a-blink-layer {
@@ -123,9 +142,6 @@ a:hover {
 @media only screen and (max-width: 600px) {
   .avatar {
     height: 50%;
-  }
-  .banner {
-    height: 7%;
   }
 }
 </style>

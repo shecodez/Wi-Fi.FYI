@@ -28,11 +28,11 @@ const menuNav = [
 ]
 
 const socialLinks = [
-  // {
-  //   icon: 'i-carbon:logo-discord',
-  //   label: 'Discord',
-  //   link: 'https://discord.gg/x2tr4fJu',
-  // },
+  {
+    icon: 'i-carbon:logo-discord',
+    label: 'Discord',
+    link: 'https://discord.gg/kE4Xu7WsQK',
+  },
   { icon: 'i-carbon:logo-instagram', label: 'Instagram', link: 'https://www.instagram.com/vvifi_fyi/' },
   { icon: 'i-carbon:logo-twitter', label: 'Twitter', link: 'https://twitter.com/vvifi_fyi' },
   { icon: 'i-carbon:logo-youtube', label: 'YouTube', link: 'https://youtube.com/@vvifi_fyi' },
