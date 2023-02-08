@@ -63,19 +63,21 @@ const socialLinks = [
   <header flex items-center justify-between absolute z-20 top-0 inset-x-10 md:inset-x-20>
     <img alt="VviFi Banner Logo" src="/images/logos/vvifi-banner.png" class="banner" h-24 md:h-36>
 
-    <SideNavDrawer :nav-links="menuNav" :social-links="socialLinks">
-      <div title="Menu" md:hidden text-xl flex items-center gap-2 border-2 p-2>
-        <div i-carbon:menu />
-        <span uppercase>Menu</span>
-      </div>
-    </SideNavDrawer>
-    <nav text-2xl flex gap-4>
-      <template v-for="n in menuNav" :key="n.href">
-        <NuxtLink :to="n.href" font-bold hover:text-orange py-4 hidden md:block>
-          {{ n.label }}
-        </NuxtLink>
-      </template>
-    </nav>
+    <span>
+      <SideNavDrawer :nav-links="menuNav" :social-links="socialLinks">
+        <div title="Menu" md:hidden text-xl flex items-center gap-2 border-2 p-2>
+          <div i-carbon:menu />
+          <span uppercase>Menu</span>
+        </div>
+      </SideNavDrawer>
+      <nav text-2xl flex gap-4>
+        <template v-for="n in menuNav" :key="n.href">
+          <NuxtLink :to="n.href" font-bold hover:text-orange py-4 hidden md:block>
+            {{ n.label }}
+          </NuxtLink>
+        </template>
+      </nav>
+    </span>
   </header>
 
   <div flex flex-col children:mx-auto class="avatar">

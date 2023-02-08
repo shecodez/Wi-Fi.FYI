@@ -1,8 +1,9 @@
 <script setup>
 import './assets/styles/main.css'
 
+const config = useRuntimeConfig()
 useHead({
-  title: 'VviFi FYI',
+  title: config.public.appName,
   link: [
     {
       rel: 'icon', type: 'image/png', href: '/favicon.ico',

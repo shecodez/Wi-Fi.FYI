@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const config = useRuntimeConfig()
+const appName = config.public.appName
+
 const blogTagRoute = '/blog/tags'
 const edcMenu = [
   { label: 'Her EDC', href: `${blogTagRoute}/her-edc` },
@@ -20,7 +23,7 @@ const megaMenuNav = [
 
 const menuNav = [
   { label: 'About', href: '/about' },
-  { label: 'VviFi 🔥Hotspot', href: '/hotspot' },
+  { label: 'VviFi\'s 🔥Hotspot', href: '/hotspot' },
   { label: 'Blog', href: '/blog', subMenuNav: megaMenuNav },
   { label: 'Topics', href: blogTopicRoute },
   { label: 'Tags', href: blogTagRoute },
@@ -45,7 +48,7 @@ const socialLinks = [
     <div container mx-auto relative flex justify-end items-center>
       <NuxtLink to="/" flex gap-3 items-center absolute top-0 left-0>
         <img src="/images/logos/vvifi-banner.png" alt="VviFi Banner Logo" w-15>
-        <span text-2xl font-black mb-4 class="rainbow-text">VviFi . FYI</span>
+        <span text-2xl font-black mb-4 class="rainbow-text">{{ appName }}</span>
       </NuxtLink>
 
       <SideNavDrawer :nav-links="menuNav" :social-links="socialLinks">
