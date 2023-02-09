@@ -40,7 +40,7 @@ const state = reactive({
             </template>
           </select>
 
-          <input v-model="state.query" type="text" placeholder="Search..." p-3 flex-1 focus:outline-none bg-transparent>
+          <input id="search" v-model="state.query" type="text" placeholder="Search..." p-3 flex-1 focus:outline-none bg-transparent>
 
           <button type="button" bg-orange rounded-tr class="px-3.5">
             <div i-carbon:search />
