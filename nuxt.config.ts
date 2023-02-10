@@ -19,6 +19,13 @@ export default defineNuxtConfig({
   // robots: {
   //   /* module options */
   // },
+  algolia: {
+    apiKey: process.env.ALGOLIA_SEARCH_API_KEY,
+    applicationId: process.env.ALGOLIA_APP_ID,
+    instantSearch: {
+      theme: 'algolia',
+    },
+  },
   nitro: {
     prerender: {
       routes: ['/sitemap.xml'],
@@ -45,6 +52,7 @@ export default defineNuxtConfig({
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://vvifi.fyi',
       cloudinaryResUrl: process.env.CLOUDINARY_RES_URL,
       reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
+      searchIndex: process.env.ALGOLIA_SEARCH_INDEX,
       // mailchimpListId: process.env.MAILCHIMP_LIST_ID,
     },
   },

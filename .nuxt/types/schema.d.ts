@@ -141,6 +141,8 @@ declare module '@nuxt/schema' {
 
     reCaptchaSiteKey: string,
 
+    searchIndex: string,
+
     content: {
         clientDB: {
              isSPA: boolean,
@@ -226,7 +228,9 @@ declare module '@nuxt/schema' {
 
         cache: boolean,
 
-        instantSearch: boolean,
+        instantSearch: {
+             theme: string,
+        },
 
         docSearch: any,
 

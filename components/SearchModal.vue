@@ -1,4 +1,8 @@
 <script setup>
+import { AisHighlight, AisHits, AisInstantSearch, AisPagination, AisPoweredBy, AisSearchBox, AisStats } from 'vue-instantsearch/vue3/es/index.js'
+
+const config = useRuntimeConfig()
+
 const openSearch = ref(false)
 function openModal() {
   openSearch.value = true
@@ -7,15 +11,31 @@ function closeModal() {
   openSearch.value = false
 }
 
-const filters = ['All', 'Blog', 'Tags', 'Topics']
+const indexes = ['Site'] // , 'Blog', 'Tags', 'Topics'
 const state = reactive({
-  filter: 'All',
+  index: 'Site',
   query: '',
-  results: [],
 
   loading: false,
   error: null,
 })
+
+const indexName = config.public.searchIndex
+// const { result, search } = useAlgoliaSearch(indexName)
+const algolia = useAlgoliaRef()
+
+async function submitSearch() {
+  try {
+    state.loading = true
+    await search(state.query)
+  }
+  catch (error) {
+    state.error = error
+  }
+  finally {
+    state.loading = false
+  }
+}
 </script>
 
 <template>
@@ -30,28 +50,53 @@ const state = reactive({
       css="w-11/12 md:max-w-lg mx-auto rounded shadow-lg bg-white dark:bg-gray-800"
       @close="closeModal"
     >
-      <form class="search-form">
+      <div p-4 max-h-xl overflow-y-auto>
+        <AisInstantSearch :index-name="indexName" :search-client="algolia">
+          <AisSearchBox />
+          <AisStats pb-2 text-right dark:text-white />
+          <AisHits>
+            <template #item="{ item }">
+              <!-- <pre>{{ item }}</pre> -->
+              <NuxtLink :to="item.url">
+                <h2>
+                  <AisHighlight attribute="title" :hit="item" font-bold pb-1 text-xl dark:text-white />
+                </h2>
+                <p>
+                  <AisHighlight attribute="description" :hit="item" text-gray />
+                </p>
+              </NuxtLink>
+            </template>
+          </AisHits>
+          <AisPagination pt-3 />
+          <AisPoweredBy pt-2 />
+        </AisInstantSearch>
+      </div>
+      <!-- <form class="search-form" @submit.prevent="submitSearch">
         <div flex rounded-t-lg focus-within:ring>
-          <select v-model="state.filter" p-3 rounded-tl focus:outline-none bg-transparent class="filter-dropdown">
-            <template v-for="(f, i) in filters" :key="`search-filter-${i}`">
+          <select v-model="state.index" p-3 rounded-tl focus:outline-none bg-transparent class="filter-dropdown">
+            <template v-for="(f, i) in indexes" :key="`search-index-${i}`">
               <option :value="f">
                 {{ f }}
               </option>
             </template>
           </select>
 
-          <input id="search" v-model="state.query" type="text" placeholder="Search..." p-3 flex-1 focus:outline-none bg-transparent>
+          <input id="search" v-model="state.query" type="text" placeholder="Search..." p-3 flex-1 focus:outline-none bg-transparent @keydown.enter.prevent="submitSearch">
 
-          <button type="button" bg-orange rounded-tr class="px-3.5">
+          <button bg-orange rounded-tr class="px-3.5" @click="submitSearch">
             <div i-carbon:search />
           </button>
         </div>
       </form>
 
-      <div p-4 border-y border-dashed border-gray-500 border-opacity-50>
-        <div v-if="state.results.length">
-          {{ state.results }}
-        </div>
+      <div p-4 border-y border-dashed border-gray-500 border-opacity-50 max-h-xl overflow-y-auto>
+        <ul v-if="!!result">
+          <template v-for="(r, i) in result?.hits" :key="`result-${i}`">
+            <li border p-2>
+              <pre>{{ r }}</pre>
+            </li>
+          </template>
+        </ul>
         <div v-else py-6 text-center opacity-60>
           No recent searches
         </div>
@@ -62,9 +107,9 @@ const state = reactive({
           <div i-carbon:close />
         </button>
         <div px-4 text-xs font-bold text-right>
-          Hits: {{ state.results.length }}
+          Hits: {{ result?.hits.length || 0 }}
         </div>
-      </div>
+      </div> -->
     </Modal>
   </client-only>
 </template>
@@ -73,5 +118,16 @@ const state = reactive({
 select.filter-dropdown option {
   background-color: black;
   /* @apply bg-black; */
+}
+</style>
+
+<style>
+.ais-Hits-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.ais-Hits-item {
+  width: 100%;
 }
 </style>
