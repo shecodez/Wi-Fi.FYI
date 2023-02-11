@@ -47,14 +47,14 @@ async function submitSearch() {
 
     <Modal
       :is-open="openSearch"
-      css="w-11/12 md:max-w-lg mx-auto rounded shadow-lg bg-white dark:bg-gray-800"
+      css="w-11/12 md:max-w-lg mx-auto rounded bg-white dark:bg-gray-800 shadow-lg "
       @close="closeModal"
     >
-      <div p-4 max-h-xl overflow-y-auto>
-        <AisInstantSearch :index-name="indexName" :search-client="algolia">
-          <AisSearchBox />
-          <AisStats pb-2 text-right dark:text-white />
-          <AisHits>
+      <div p-4>
+        <AisInstantSearch :index-name="indexName" :search-client="algolia" stalled-search-delay="200">
+          <AisSearchBox show-loading-indicator pb-3 />
+
+          <AisHits max-h-lg overflow-y-auto>
             <template #item="{ item }">
               <!-- <pre>{{ item }}</pre> -->
               <NuxtLink :to="item.url">
@@ -68,7 +68,10 @@ async function submitSearch() {
             </template>
           </AisHits>
           <AisPagination pt-3 />
-          <AisPoweredBy pt-2 />
+          <div flex items-center justify-between pt-3>
+            <AisStats dark:text-white tracking-wide />
+            <AisPoweredBy />
+          </div>
         </AisInstantSearch>
       </div>
       <!-- <form class="search-form" @submit.prevent="submitSearch">
@@ -129,5 +132,6 @@ select.filter-dropdown option {
 }
 .ais-Hits-item {
   width: 100%;
+  border-radius: 0.25rem;
 }
 </style>

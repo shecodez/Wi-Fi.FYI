@@ -9,7 +9,7 @@ import tokyoImg from '@/assets/images/tokyo.png'
         <h1>About</h1>
 
         <p font-italic>
-          Hi there! 👋<br> Welcome to VviFi– the nerdy nomads hotspot for <NuxtLink to="/topics/wtf">
+          Hi there! 👋<br> Welcome to VviFi– the nomadic nerds hotspot for <NuxtLink to="/topics/wtf">
             #Tech
           </NuxtLink>, <NuxtLink to="/topics/travel">
             #Travel

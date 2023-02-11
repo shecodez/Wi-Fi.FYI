@@ -48,7 +48,7 @@ export default defineNuxtConfig({
     // Config within public will be also exposed to the client
     public: {
       appName: 'VviFi.FYI',
-      appDescription: 'VviFi– the nerdy nomads hotspot for #tech, #travel, and #food –.FYI',
+      appDescription: 'VviFi– the nomadic nerds hotspot for #tech, #travel, and #food –.FYI',
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://vvifi.fyi',
       cloudinaryResUrl: process.env.CLOUDINARY_RES_URL,
       reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
